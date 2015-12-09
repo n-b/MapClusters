@@ -141,7 +141,7 @@
                 for (ADMapPointAnnotation * annotation in annotations) {
                     const MKMapPoint point = annotation.mapPoint;
                     BOOL positivityConditionOfScalarProduct = YES;
-                    if (YES) {
+                    if (/* DISABLES CODE */ (YES)) {
                         positivityConditionOfScalarProduct = (point.x - XMean) * aX + (point.y - YMean) * aY > 0.0;
                     } else {
                         positivityConditionOfScalarProduct = (point.y - YMean) > 0.0;

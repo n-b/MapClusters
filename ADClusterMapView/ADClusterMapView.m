@@ -163,18 +163,18 @@
     [super setDelegate:self];
 }
 
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    BOOL respondsToSelector = [super respondsToSelector:aSelector] || [_secondaryDelegate respondsToSelector:aSelector];
-    return respondsToSelector;
-}
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation {
-    if ([_secondaryDelegate respondsToSelector:[anInvocation selector]]) {
-        [anInvocation invokeWithTarget:_secondaryDelegate];
-    } else {
-        [super forwardInvocation:anInvocation];
-    }
-}
+//- (BOOL)respondsToSelector:(SEL)aSelector {
+//    BOOL respondsToSelector = [super respondsToSelector:aSelector] || [_secondaryDelegate respondsToSelector:aSelector];
+//    return respondsToSelector;
+//}
+//
+//- (void)forwardInvocation:(NSInvocation *)anInvocation {
+//    if ([_secondaryDelegate respondsToSelector:[anInvocation selector]]) {
+//        [anInvocation invokeWithTarget:_secondaryDelegate];
+//    } else {
+//        [super forwardInvocation:anInvocation];
+//    }
+//}
 
 - (void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
     for (ADClusterAnnotation * annotation in _clusterAnnotations) {
@@ -360,17 +360,17 @@
             [annotation reset];
         }
     }
-    [UIView beginAnimations:@"ADClusterMapViewAnimation" context:NULL];
-    [UIView setAnimationBeginsFromCurrentState:NO];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDuration:0.5f];
+//    [UIView beginAnimations:@"ADClusterMapViewAnimation" context:NULL];
+//    [UIView setAnimationBeginsFromCurrentState:NO];
+//    [UIView setAnimationDelegate:self];
+//    [UIView setAnimationDuration:0.5f];
     for (ADClusterAnnotation * annotation in _clusterAnnotations) {
         if (![annotation isKindOfClass:[MKUserLocation class]] && annotation.cluster) {
             NSAssert(!ADClusterCoordinate2DIsOffscreen(annotation.coordinate), @"annotation.coordinate not valid! Can't animate from an invalid coordinate (inconsistent result)!");
             annotation.coordinate = annotation.cluster.clusterCoordinate;
         }
     }
-    [UIView commitAnimations];
+//    [UIView commitAnimations];
 
 
     // Add not-yet-annotated clusters
