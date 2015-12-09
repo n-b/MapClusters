@@ -8,10 +8,11 @@
 // Clusterers
 #import "CCHMapClusterController.h"
 #import "CCHMapClusterAnnotation.h"
+#import "CCHMapClusterControllerDelegate.h"
 
 #import "ADClusterMapView.h"
 
-@interface MapVC() <MKMapViewDelegate, ADClusterMapViewDelegate>
+@interface MapVC() <MKMapViewDelegate, CCHMapClusterControllerDelegate, ADClusterMapViewDelegate>
 @property IBOutlet MKMapView * mapView;
 @property IBOutlet ADClusterMapView * adClusterMapView;
 @property (nonatomic) CCHMapClusterController *mapClusterController;
@@ -19,11 +20,6 @@
 @end
 
 @implementation MapVC
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
 
 - (CCHMapClusterController *)mapClusterController
 {
@@ -110,20 +106,32 @@
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    if([annotation isKindOfClass:CCHMapClusterAnnotation.class]) {
-        MKPinAnnotationView * view = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapClusters"];
-        if(nil==view) {
-            view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapClusters"];
-        }
-        if([(CCHMapClusterAnnotation *)annotation isCluster]) {
-            view.pinTintColor = NSColor.greenColor;
-        } else {
-            view.pinTintColor = NSColor.redColor;
-        }
-        return view;
+    if([annotation isKindOfClass:CCHMapClusterAnnotation.class]){
+        [(CCHMapClusterAnnotation*)annotation setDelegate:self];
     }
- 
-    return nil;
+    MKPinAnnotationView * view = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapClusters"];
+    if(nil==view) {
+        view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapClusters"];
+    }
+    BOOL isCluster = NO;
+    if([annotation isKindOfClass:CCHMapClusterAnnotation.class]
+       && [(CCHMapClusterAnnotation *)annotation isCluster]) {
+        isCluster = YES;
+    }
+    if([annotation isKindOfClass:ADClusterAnnotation.class]
+       && [(ADClusterAnnotation*)annotation type]==ADClusterAnnotationTypeCluster){
+        isCluster = YES;
+    }
+
+    if (isCluster) {
+        view.image = [NSImage imageNamed:@"cluster"];
+        view.canShowCallout = NO;
+    } else {
+        view.image = [NSImage imageNamed:@"station"];
+        view.canShowCallout = YES;
+    }
+    
+    return view;
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
@@ -135,6 +143,24 @@
         return renderer;
     } else {
         return [[StationsOverlayRenderer alloc] initWithOverlay:overlay];
+    }
+}
+
+- (NSString *)mapClusterController:(CCHMapClusterController *)mapClusterController titleForMapClusterAnnotation:(CCHMapClusterAnnotation *)mapClusterAnnotation
+{
+    if (!mapClusterAnnotation.isCluster) {
+        return [[mapClusterAnnotation.annotations anyObject] title];
+    } else {
+        return nil;
+    }
+}
+
+- (NSString *)mapClusterController:(CCHMapClusterController *)mapClusterController subtitleForMapClusterAnnotation:(CCHMapClusterAnnotation *)mapClusterAnnotation
+{
+    if (!mapClusterAnnotation.isCluster) {
+        return [[mapClusterAnnotation.annotations anyObject] subtitle];
+    } else {
+        return nil;
     }
 }
 
