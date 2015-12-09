@@ -601,7 +601,11 @@
                                                 <action selector="showCountriesOverlays:" target="Ady-hI-5gd" id="kru-nR-NCV"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Stations Overlay" keyEquivalent="(" id="DAb-bn-Pvs"/>
+                                        <menuItem title="Stations Overlay" keyEquivalent="(" id="DAb-bn-Pvs">
+                                            <connections>
+                                                <action selector="showStationsOverlay:" target="Ady-hI-5gd" id="nMo-rl-KUO"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>

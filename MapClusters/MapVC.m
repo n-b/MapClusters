@@ -3,6 +3,7 @@
 #import "StationsStore.h"
 #import "Station.h"
 #import "Country.h"
+#import "StationsOverlayRenderer.h"
 
 // Clusterers
 #import "CCHMapClusterController.h"
@@ -66,6 +67,12 @@
     }
 }
 
+- (IBAction)showStationsOverlay:(id)sender
+{
+    [self clearMapContents];
+    [self.mapView addOverlay:self.store];
+}
+
 // MKMapViewDelegate
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
@@ -94,8 +101,10 @@
         renderer.lineWidth = 1;
         return renderer;
     } else {
-        return nil;
+        return [[StationsOverlayRenderer alloc] initWithOverlay:overlay];
     }
 }
 
 @end
+
+
