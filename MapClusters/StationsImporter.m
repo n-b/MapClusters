@@ -69,20 +69,27 @@
 {
     if(_firstLine) {
         _firstLine = NO;
-        [_writer writeLineOfFields:@[@"latitude", @"longitude", @"name"]];
+        [_writer writeLineOfFields:@[@"latitude", @"longitude", @"name", @"country"]];
     } else {
         Station * station = [Station new];
         station.latitude = _values[@"latitude"].doubleValue;
         station.longitude = _values[@"longitude"].doubleValue;
+        if(station.latitude==0 || station.longitude==0) {
+            return;
+        }
         station.name = _values[@"name"];
-        [_writer writeLineOfFields:@[_values[@"latitude"], _values[@"longitude"], _values[@"name"]]];
+        station.country = _values[@"country"];
+        NSArray * validCountries = @[@"AT", @"BE", @"BY", @"CH", @"CZ", @"DE", @"DK", @"ES", @"FR", @"GB", @"HR", @"HU", @"IT", @"LU", @"NL", @"PL", @"PT", @"RU", @"SE", @"SI", @"SK"];
+        if(![validCountries containsObject:station.country]) {
+            return;
+        }
+        [_writer writeLineOfFields:@[_values[@"latitude"], _values[@"longitude"], _values[@"name"], _values[@"country"]]];
         [self.delegate importer:self didFindStation:station];
     }
 }
 
 - (void)parserDidEndDocument:(CHCSVParser *)parser
 {
-    [_writer writeLineOfFields:@[_values[@"latitude"], _values[@"longitude"], _values[@"name"]]];
     [self.delegate importerDidFinish:self];
 }
 

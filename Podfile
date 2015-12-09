@@ -4,5 +4,6 @@
 target 'MapClusters' do
   pod 'CHCSVParser', '~> 2.1'
   pod 'CCHMapClusterController', '~> 1.6.6'
+  pod 'GeoJSONSerialization', '~> 0.0.4'
 end
 

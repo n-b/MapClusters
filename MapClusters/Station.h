@@ -5,6 +5,7 @@
 @property CLLocationDegrees latitude;
 @property CLLocationDegrees longitude;
 @property (copy) NSString * name;
+@property (copy) NSString * country;
 
 
 - (CLLocationCoordinate2D)coordinate;

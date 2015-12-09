@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "184BA4CC060F5CEA0794B990"
-               BuildableName = "libCHCSVParser.a"
-               BlueprintName = "CHCSVParser"
+               BlueprintIdentifier = "6EF5E02AE1809F8D26ED0340"
+               BuildableName = "libGeoJSONSerialization.a"
+               BlueprintName = "GeoJSONSerialization"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

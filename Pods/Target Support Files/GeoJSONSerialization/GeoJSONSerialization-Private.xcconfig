@@ -1,0 +1,6 @@
+#include "GeoJSONSerialization.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/GeoJSONSerialization" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CCHMapClusterController" "${PODS_ROOT}/Headers/Public/CHCSVParser" "${PODS_ROOT}/Headers/Public/GeoJSONSerialization"
+OTHER_LDFLAGS = ${GEOJSONSERIALIZATION_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
