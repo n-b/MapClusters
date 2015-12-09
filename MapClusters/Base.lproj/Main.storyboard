@@ -695,7 +695,7 @@
                                 </connections>
                             </mapView>
                             <mapView mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-yT-79f" customClass="ADClusterMapView">
-                                <rect key="frame" x="-1" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <connections>
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="rZt-9i-1M4"/>
                                 </connections>
@@ -705,11 +705,11 @@
                             <constraint firstItem="qZp-4V-zOI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6BG-vt-z5a"/>
                             <constraint firstItem="qZp-4V-zOI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="J8A-mJ-cBS"/>
                             <constraint firstItem="Lme-yT-79f" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Llf-Ph-Vd8"/>
-                            <constraint firstItem="Lme-yT-79f" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="-1" id="NdQ-OH-E0s"/>
+                            <constraint firstItem="Lme-yT-79f" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="NdQ-OH-E0s"/>
                             <constraint firstAttribute="trailing" secondItem="qZp-4V-zOI" secondAttribute="trailing" id="OZf-Aj-xGM"/>
                             <constraint firstAttribute="bottom" secondItem="Lme-yT-79f" secondAttribute="bottom" id="Wgs-Lm-f8i"/>
                             <constraint firstAttribute="bottom" secondItem="qZp-4V-zOI" secondAttribute="bottom" id="hBC-7h-T1w"/>
-                            <constraint firstAttribute="trailing" secondItem="Lme-yT-79f" secondAttribute="trailing" constant="1" id="xjc-Pv-8bF"/>
+                            <constraint firstAttribute="trailing" secondItem="Lme-yT-79f" secondAttribute="trailing" id="xjc-Pv-8bF"/>
                         </constraints>
                     </view>
                     <connections>
