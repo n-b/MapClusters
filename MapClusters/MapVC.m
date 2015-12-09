@@ -9,34 +9,40 @@
 
 @interface MapVC() <MKMapViewDelegate>
 @property IBOutlet MKMapView * mapView;
-@property (strong, nonatomic) CCHMapClusterController *mapClusterController;
+@property (nonatomic) CCHMapClusterController *mapClusterController;
+@property (nonatomic) StationsStore * store;
 @end
 
 @implementation MapVC
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // CCHMapClusterController
-    self.mapClusterController = [[CCHMapClusterController alloc] initWithMapView:self.mapView];
-
-    NSURL * url = [[NSBundle bundleForClass:self.class] URLForResource:@"stations" withExtension:@"csv"];
-    self.representedObject = [[StationsStore alloc] initWithCSV:url];
+- (CCHMapClusterController *)mapClusterController
+{
+    if(!_mapClusterController && self.viewLoaded) {
+        _mapClusterController = [[CCHMapClusterController alloc] initWithMapView:self.mapView];
+    }
+    return _mapClusterController;
+}
+- (StationsStore *) store
+{
+    if(!_store) {
+        NSURL * url = [[NSBundle bundleForClass:self.class] URLForResource:@"stations" withExtension:@"csv"];
+        _store =  [[StationsStore alloc] initWithCSV:url];
+    }
+    return _store;
 }
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-    
-    // Update the view, if already loaded.
-    StationsStore * store = representedObject;
-    
+- (void) viewDidAppear
+{
+    [super viewDidAppear];
+
     // Individual Annotation
-//    [self.mapView addAnnotations:store.stations];
+    //    [self.mapView addAnnotations:store.stations];
     
     // CCHMapClusterController
-    [self.mapClusterController addAnnotations:store.stations withCompletionHandler:NULL];
+    [self.mapClusterController addAnnotations:self.store.stations withCompletionHandler:NULL];
 }
 
+// MKMapViewDelegate
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     if([annotation isKindOfClass:CCHMapClusterAnnotation.class]) {
