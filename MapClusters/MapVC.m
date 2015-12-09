@@ -111,7 +111,7 @@
     }
     MKPinAnnotationView * view = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapClusters"];
     if(nil==view) {
-        view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapClusters"];
+        view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapClusters"];
     }
     BOOL isCluster = NO;
     if([annotation isKindOfClass:CCHMapClusterAnnotation.class]
@@ -122,15 +122,17 @@
        && [(ADClusterAnnotation*)annotation type]==ADClusterAnnotationTypeCluster){
         isCluster = YES;
     }
+    if([annotation isKindOfClass:Country.class]) {
+        isCluster = YES;
+    }
 
     if (isCluster) {
         view.image = [NSImage imageNamed:@"cluster"];
-        view.canShowCallout = NO;
     } else {
         view.image = [NSImage imageNamed:@"station"];
-        view.canShowCallout = YES;
     }
     
+    view.canShowCallout = YES;
     return view;
 }
 
