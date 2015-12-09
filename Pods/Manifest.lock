@@ -1,0 +1,10 @@
+PODS:
+  - CHCSVParser (2.1.0)
+
+DEPENDENCIES:
+  - CHCSVParser (~> 2.1)
+
+SPEC CHECKSUMS:
+  CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
+
+COCOAPODS: 0.38.2

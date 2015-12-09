@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C57A849F5624C3F73B1ED3B /* libPods-MapClusters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B39FE739E793CA4DB02A4BA /* libPods-MapClusters.a */; };
 		3701618F1C131DC400FF4703 /* MapClusters.m in Sources */ = {isa = PBXBuildFile; fileRef = 3701618E1C131DC400FF4703 /* MapClusters.m */; };
 		370161921C131DC400FF4703 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 370161911C131DC400FF4703 /* MapVC.m */; };
 		370161941C131DC400FF4703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370161931C131DC400FF4703 /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B39FE739E793CA4DB02A4BA /* libPods-MapClusters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MapClusters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28CF53D1EC1D32B232B0BEAD /* Pods-MapClusters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapClusters.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapClusters/Pods-MapClusters.release.xcconfig"; sourceTree = "<group>"; };
 		370161871C131DC400FF4703 /* MapClusters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapClusters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3701618E1C131DC400FF4703 /* MapClusters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapClusters.m; path = MapClusters/MapClusters.m; sourceTree = "<group>"; };
 		370161901C131DC400FF4703 /* MapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MapVC.h; path = MapClusters/MapVC.h; sourceTree = "<group>"; };
@@ -23,6 +26,7 @@
 		370161961C131DC400FF4703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		370161981C131DC400FF4703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MapClusters/Info.plist; sourceTree = "<group>"; };
 		37A9A39D1C182B420079499A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BAAD361C78F6732CDC755D16 /* Pods-MapClusters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapClusters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapClusters/Pods-MapClusters.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A9A39E1C182B420079499A /* MapKit.framework in Frameworks */,
+				2C57A849F5624C3F73B1ED3B /* libPods-MapClusters.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,11 +48,13 @@
 				370161981C131DC400FF4703 /* Info.plist */,
 				370161951C131DC400FF4703 /* Main.storyboard */,
 				370161931C131DC400FF4703 /* Assets.xcassets */,
-				37A9A39D1C182B420079499A /* MapKit.framework */,
 				3701618E1C131DC400FF4703 /* MapClusters.m */,
 				370161901C131DC400FF4703 /* MapVC.h */,
 				370161911C131DC400FF4703 /* MapVC.m */,
+				37A9A39F1C182FB00079499A /* DataModel */,
 				370161881C131DC400FF4703 /* Products */,
+				E1D7D190BEF5D08F99B9F774 /* Pods */,
+				82E9A2241DE9CF8B49B5446E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +66,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		37A9A39F1C182FB00079499A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		82E9A2241DE9CF8B49B5446E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37A9A39D1C182B420079499A /* MapKit.framework */,
+				0B39FE739E793CA4DB02A4BA /* libPods-MapClusters.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1D7D190BEF5D08F99B9F774 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAAD361C78F6732CDC755D16 /* Pods-MapClusters.debug.xcconfig */,
+				28CF53D1EC1D32B232B0BEAD /* Pods-MapClusters.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -66,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3701619B1C131DC400FF4703 /* Build configuration list for PBXNativeTarget "MapClusters" */;
 			buildPhases = (
+				2D8F75099573C494C231D27F /* Check Pods Manifest.lock */,
 				370161831C131DC300FF4703 /* Sources */,
 				370161841C131DC300FF4703 /* Frameworks */,
 				370161851C131DC300FF4703 /* Resources */,
+				7322BFCF6F67DC6C84AB6504 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,6 +156,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D8F75099573C494C231D27F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7322BFCF6F67DC6C84AB6504 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapClusters/Pods-MapClusters-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		370161831C131DC300FF4703 /* Sources */ = {
@@ -229,6 +296,7 @@
 		};
 		3701619C1C131DC400FF4703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAAD361C78F6732CDC755D16 /* Pods-MapClusters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -241,6 +309,7 @@
 		};
 		3701619D1C131DC400FF4703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28CF53D1EC1D32B232B0BEAD /* Pods-MapClusters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
