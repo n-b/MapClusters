@@ -13,6 +13,10 @@
 		370161941C131DC400FF4703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370161931C131DC400FF4703 /* Assets.xcassets */; };
 		370161971C131DC400FF4703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370161951C131DC400FF4703 /* Main.storyboard */; };
 		37A9A39E1C182B420079499A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A9A39D1C182B420079499A /* MapKit.framework */; };
+		37A9A3B21C18304A0079499A /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9A3AC1C18304A0079499A /* Station.m */; };
+		37A9A3B31C18304A0079499A /* stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = 37A9A3AD1C18304A0079499A /* stations.csv */; };
+		37A9A3B41C18304A0079499A /* StationsImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9A3AF1C18304A0079499A /* StationsImporter.m */; };
+		37A9A3B51C18304A0079499A /* StationsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9A3B11C18304A0079499A /* StationsStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		370161961C131DC400FF4703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		370161981C131DC400FF4703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MapClusters/Info.plist; sourceTree = "<group>"; };
 		37A9A39D1C182B420079499A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		37A9A3AB1C18304A0079499A /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Station.h; path = MapClusters/Station.h; sourceTree = "<group>"; };
+		37A9A3AC1C18304A0079499A /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Station.m; path = MapClusters/Station.m; sourceTree = "<group>"; };
+		37A9A3AD1C18304A0079499A /* stations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stations.csv; path = MapClusters/stations.csv; sourceTree = "<group>"; };
+		37A9A3AE1C18304A0079499A /* StationsImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StationsImporter.h; path = MapClusters/StationsImporter.h; sourceTree = "<group>"; };
+		37A9A3AF1C18304A0079499A /* StationsImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StationsImporter.m; path = MapClusters/StationsImporter.m; sourceTree = "<group>"; };
+		37A9A3B01C18304A0079499A /* StationsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StationsStore.h; path = MapClusters/StationsStore.h; sourceTree = "<group>"; };
+		37A9A3B11C18304A0079499A /* StationsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StationsStore.m; path = MapClusters/StationsStore.m; sourceTree = "<group>"; };
 		BAAD361C78F6732CDC755D16 /* Pods-MapClusters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapClusters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapClusters/Pods-MapClusters.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +80,13 @@
 		37A9A39F1C182FB00079499A /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				37A9A3AB1C18304A0079499A /* Station.h */,
+				37A9A3AC1C18304A0079499A /* Station.m */,
+				37A9A3AD1C18304A0079499A /* stations.csv */,
+				37A9A3AE1C18304A0079499A /* StationsImporter.h */,
+				37A9A3AF1C18304A0079499A /* StationsImporter.m */,
+				37A9A3B01C18304A0079499A /* StationsStore.h */,
+				37A9A3B11C18304A0079499A /* StationsStore.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -150,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A9A3B31C18304A0079499A /* stations.csv in Resources */,
 				370161941C131DC400FF4703 /* Assets.xcassets in Resources */,
 				370161971C131DC400FF4703 /* Main.storyboard in Resources */,
 			);
@@ -195,8 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A9A3B41C18304A0079499A /* StationsImporter.m in Sources */,
 				370161921C131DC400FF4703 /* MapVC.m in Sources */,
 				3701618F1C131DC400FF4703 /* MapClusters.m in Sources */,
+				37A9A3B51C18304A0079499A /* StationsStore.m in Sources */,
+				37A9A3B21C18304A0079499A /* Station.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
