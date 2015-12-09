@@ -5,8 +5,9 @@
 
 // Clusterers
 #import "CCHMapClusterController.h"
+#import "CCHMapClusterAnnotation.h"
 
-@interface MapVC()
+@interface MapVC() <MKMapViewDelegate>
 @property IBOutlet MKMapView * mapView;
 @property (strong, nonatomic) CCHMapClusterController *mapClusterController;
 @end
@@ -34,6 +35,24 @@
     
     // CCHMapClusterController
     [self.mapClusterController addAnnotations:store.stations withCompletionHandler:NULL];
+}
+
+- (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if([annotation isKindOfClass:CCHMapClusterAnnotation.class]) {
+        MKPinAnnotationView * view = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapClusters"];
+        if(nil==view) {
+            view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapClusters"];
+        }
+        if([(CCHMapClusterAnnotation *)annotation isCluster]) {
+            view.pinTintColor = NSColor.greenColor;
+        } else {
+            view.pinTintColor = NSColor.redColor;
+        }
+        return view;
+    }
+ 
+    return nil;
 }
 
 @end
