@@ -7,23 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3701618C1C131DC400FF4703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3701618B1C131DC400FF4703 /* AppDelegate.m */; };
-		3701618F1C131DC400FF4703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3701618E1C131DC400FF4703 /* main.m */; };
-		370161921C131DC400FF4703 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370161911C131DC400FF4703 /* ViewController.m */; };
+		3701618F1C131DC400FF4703 /* MapClusters.m in Sources */ = {isa = PBXBuildFile; fileRef = 3701618E1C131DC400FF4703 /* MapClusters.m */; };
+		370161921C131DC400FF4703 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 370161911C131DC400FF4703 /* MapVC.m */; };
 		370161941C131DC400FF4703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370161931C131DC400FF4703 /* Assets.xcassets */; };
 		370161971C131DC400FF4703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370161951C131DC400FF4703 /* Main.storyboard */; };
+		37A9A39E1C182B420079499A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A9A39D1C182B420079499A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		370161871C131DC400FF4703 /* MapClusters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapClusters.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3701618A1C131DC400FF4703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3701618B1C131DC400FF4703 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3701618E1C131DC400FF4703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		370161901C131DC400FF4703 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		370161911C131DC400FF4703 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		370161931C131DC400FF4703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3701618E1C131DC400FF4703 /* MapClusters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapClusters.m; path = MapClusters/MapClusters.m; sourceTree = "<group>"; };
+		370161901C131DC400FF4703 /* MapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MapVC.h; path = MapClusters/MapVC.h; sourceTree = "<group>"; };
+		370161911C131DC400FF4703 /* MapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapVC.m; path = MapClusters/MapVC.m; sourceTree = "<group>"; };
+		370161931C131DC400FF4703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MapClusters/Assets.xcassets; sourceTree = "<group>"; };
 		370161961C131DC400FF4703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		370161981C131DC400FF4703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370161981C131DC400FF4703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MapClusters/Info.plist; sourceTree = "<group>"; };
+		37A9A39D1C182B420079499A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A9A39E1C182B420079499A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +40,13 @@
 		3701617E1C131DC300FF4703 = {
 			isa = PBXGroup;
 			children = (
-				370161891C131DC400FF4703 /* MapClusters */,
+				370161981C131DC400FF4703 /* Info.plist */,
+				370161951C131DC400FF4703 /* Main.storyboard */,
+				370161931C131DC400FF4703 /* Assets.xcassets */,
+				37A9A39D1C182B420079499A /* MapKit.framework */,
+				3701618E1C131DC400FF4703 /* MapClusters.m */,
+				370161901C131DC400FF4703 /* MapVC.h */,
+				370161911C131DC400FF4703 /* MapVC.m */,
 				370161881C131DC400FF4703 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,29 +57,6 @@
 				370161871C131DC400FF4703 /* MapClusters.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		370161891C131DC400FF4703 /* MapClusters */ = {
-			isa = PBXGroup;
-			children = (
-				3701618A1C131DC400FF4703 /* AppDelegate.h */,
-				3701618B1C131DC400FF4703 /* AppDelegate.m */,
-				370161901C131DC400FF4703 /* ViewController.h */,
-				370161911C131DC400FF4703 /* ViewController.m */,
-				370161931C131DC400FF4703 /* Assets.xcassets */,
-				370161951C131DC400FF4703 /* Main.storyboard */,
-				370161981C131DC400FF4703 /* Info.plist */,
-				3701618D1C131DC400FF4703 /* Supporting Files */,
-			);
-			path = MapClusters;
-			sourceTree = "<group>";
-		};
-		3701618D1C131DC400FF4703 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3701618E1C131DC400FF4703 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370161921C131DC400FF4703 /* ViewController.m in Sources */,
-				3701618F1C131DC400FF4703 /* main.m in Sources */,
-				3701618C1C131DC400FF4703 /* AppDelegate.m in Sources */,
+				370161921C131DC400FF4703 /* MapVC.m in Sources */,
+				3701618F1C131DC400FF4703 /* MapClusters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +142,7 @@
 				370161961C131DC400FF4703 /* Base */,
 			);
 			name = Main.storyboard;
+			path = MapClusters;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -287,6 +270,7 @@
 				3701619D1C131DC400FF4703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
