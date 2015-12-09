@@ -9,4 +9,8 @@
 {
     return self.name;
 }
+- (NSString *)subtitle
+{
+    return self.country;
+}
 @end

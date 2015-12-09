@@ -24,7 +24,7 @@
     return _mapClusterController;
 }
 
-- (StationsStore *) store
+- (StationsStore *)store
 {
     if(!_store) {
         NSURL * url = [[NSBundle bundleForClass:self.class] URLForResource:@"stations" withExtension:@"csv"];
@@ -33,22 +33,38 @@
     return _store;
 }
 
-- (void) viewDidAppear
+- (void)viewDidAppear
 {
     [super viewDidAppear];
+}
 
-    // Individual Annotation
-    //    [self.mapView addAnnotations:store.stations];
-    
-    // CCHMapClusterController
-//    [self.mapClusterController addAnnotations:self.store.stations withCompletionHandler:NULL];
-    
+- (void)clearMapContents
+{
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self.mapView removeOverlays:self.mapView.overlays];
+    [self.mapClusterController removeAnnotations:self.store.stations withCompletionHandler:NULL];
+}
+
+- (IBAction)showStationsAnnotations:(id)sender
+{
+    [self clearMapContents];
+    [self.mapView addAnnotations:self.store.stations];
+}
+
+- (IBAction)showQuadtreeClusters:(id)sender
+{
+    [self clearMapContents];
+    [self.mapClusterController addAnnotations:self.store.stations withCompletionHandler:NULL];
+}
+
+- (IBAction)showCountriesOverlays:(id)sender
+{
+    [self clearMapContents];
     for (Country* country in self.store.countries) {
         [self.mapView addOverlays:country.polygons];
         [self.mapView addAnnotation:country];
     }
 }
-
 
 // MKMapViewDelegate
 
@@ -74,8 +90,8 @@
 {
     if([overlay isKindOfClass:MKPolygon.class]) {
         MKPolygonRenderer * renderer = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
-        renderer.fillColor = [NSColor.redColor colorWithAlphaComponent:.1];
-        renderer.strokeColor = [NSColor.redColor colorWithAlphaComponent:.5];
+        renderer.strokeColor = NSColor.grayColor;
+        renderer.lineWidth = 1;
         return renderer;
     } else {
         return nil;
