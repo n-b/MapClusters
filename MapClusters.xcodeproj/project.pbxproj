@@ -35,6 +35,10 @@
 		3706E2861C18829A00E8A931 /* HR.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2851C18829A00E8A931 /* HR.json */; };
 		3706E2891C18907B00E8A931 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2881C18907B00E8A931 /* Country.m */; };
 		3706E2941C18C97A00E8A931 /* StationsOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2931C18C97A00E8A931 /* StationsOverlayRenderer.m */; };
+		3706E29E1C18CB8000E8A931 /* ADClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2971C18CB8000E8A931 /* ADClusterAnnotation.m */; };
+		3706E29F1C18CB8000E8A931 /* ADClusterMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2991C18CB8000E8A931 /* ADClusterMapView.m */; };
+		3706E2A01C18CB8000E8A931 /* ADMapCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E29B1C18CB8000E8A931 /* ADMapCluster.m */; };
+		3706E2A11C18CB8000E8A931 /* ADMapPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E29D1C18CB8000E8A931 /* ADMapPointAnnotation.m */; };
 		37A9A39E1C182B420079499A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A9A39D1C182B420079499A /* MapKit.framework */; };
 		37A9A3B21C18304A0079499A /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9A3AC1C18304A0079499A /* Station.m */; };
 		37A9A3B31C18304A0079499A /* stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = 37A9A3AD1C18304A0079499A /* stations.csv */; };
@@ -77,6 +81,14 @@
 		3706E2881C18907B00E8A931 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Country.m; path = MapClusters/Country.m; sourceTree = "<group>"; };
 		3706E2921C18C97A00E8A931 /* StationsOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StationsOverlayRenderer.h; path = MapClusters/StationsOverlayRenderer.h; sourceTree = "<group>"; };
 		3706E2931C18C97A00E8A931 /* StationsOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StationsOverlayRenderer.m; path = MapClusters/StationsOverlayRenderer.m; sourceTree = "<group>"; };
+		3706E2961C18CB8000E8A931 /* ADClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADClusterAnnotation.h; sourceTree = "<group>"; };
+		3706E2971C18CB8000E8A931 /* ADClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADClusterAnnotation.m; sourceTree = "<group>"; };
+		3706E2981C18CB8000E8A931 /* ADClusterMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADClusterMapView.h; sourceTree = "<group>"; };
+		3706E2991C18CB8000E8A931 /* ADClusterMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADClusterMapView.m; sourceTree = "<group>"; };
+		3706E29A1C18CB8000E8A931 /* ADMapCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapCluster.h; sourceTree = "<group>"; };
+		3706E29B1C18CB8000E8A931 /* ADMapCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapCluster.m; sourceTree = "<group>"; };
+		3706E29C1C18CB8000E8A931 /* ADMapPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapPointAnnotation.h; sourceTree = "<group>"; };
+		3706E29D1C18CB8000E8A931 /* ADMapPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapPointAnnotation.m; sourceTree = "<group>"; };
 		37A9A39D1C182B420079499A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37A9A3AB1C18304A0079499A /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Station.h; path = MapClusters/Station.h; sourceTree = "<group>"; };
 		37A9A3AC1C18304A0079499A /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Station.m; path = MapClusters/Station.m; sourceTree = "<group>"; };
@@ -113,6 +125,7 @@
 				3706E28E1C18C95F00E8A931 /* Views */,
 				37A9A39F1C182FB00079499A /* DataModel */,
 				370161881C131DC400FF4703 /* Products */,
+				3706E2951C18CB8000E8A931 /* ADClusterMapView */,
 				E1D7D190BEF5D08F99B9F774 /* Pods */,
 				82E9A2241DE9CF8B49B5446E /* Frameworks */,
 			);
@@ -161,6 +174,21 @@
 				3706E2931C18C97A00E8A931 /* StationsOverlayRenderer.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		3706E2951C18CB8000E8A931 /* ADClusterMapView */ = {
+			isa = PBXGroup;
+			children = (
+				3706E2961C18CB8000E8A931 /* ADClusterAnnotation.h */,
+				3706E2971C18CB8000E8A931 /* ADClusterAnnotation.m */,
+				3706E2981C18CB8000E8A931 /* ADClusterMapView.h */,
+				3706E2991C18CB8000E8A931 /* ADClusterMapView.m */,
+				3706E29A1C18CB8000E8A931 /* ADMapCluster.h */,
+				3706E29B1C18CB8000E8A931 /* ADMapCluster.m */,
+				3706E29C1C18CB8000E8A931 /* ADMapPointAnnotation.h */,
+				3706E29D1C18CB8000E8A931 /* ADMapPointAnnotation.m */,
+			);
+			path = ADClusterMapView;
 			sourceTree = "<group>";
 		};
 		37A9A39F1C182FB00079499A /* DataModel */ = {
@@ -326,7 +354,11 @@
 			files = (
 				3706E2941C18C97A00E8A931 /* StationsOverlayRenderer.m in Sources */,
 				37A9A3B41C18304A0079499A /* StationsImporter.m in Sources */,
+				3706E2A11C18CB8000E8A931 /* ADMapPointAnnotation.m in Sources */,
+				3706E29E1C18CB8000E8A931 /* ADClusterAnnotation.m in Sources */,
 				370161921C131DC400FF4703 /* MapVC.m in Sources */,
+				3706E2A01C18CB8000E8A931 /* ADMapCluster.m in Sources */,
+				3706E29F1C18CB8000E8A931 /* ADClusterMapView.m in Sources */,
 				3701618F1C131DC400FF4703 /* MapClusters.m in Sources */,
 				37A9A3B51C18304A0079499A /* StationsStore.m in Sources */,
 				3706E2891C18907B00E8A931 /* Country.m in Sources */,
