@@ -3,7 +3,14 @@
 
 @interface Country ()
 @property (nonatomic) CLLocationCoordinate2D coordinate;
-@property (nonatomic) NSArray<MKPolygon*>* polygons;
+@property (nonatomic) NSArray<CountryPart*>* parts;
+@end
+
+@interface CountryPart ()
+@property (weak) Country* country;
+@end
+
+@implementation CountryPart
 @end
 
 @implementation Country
@@ -44,9 +51,9 @@
     return _coordinate;
 }
 
-- (NSArray<MKPolygon *> *)polygons
+- (NSArray<CountryPart *> *)parts
 {
-    if(!_polygons) {
+    if(!_parts) {
         NSURL *URL = [[NSBundle mainBundle] URLForResource:self.name withExtension:@"json"];
         NSData *data = [NSData dataWithContentsOfURL:URL];
         NSArray *geoJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
@@ -56,12 +63,16 @@
         if(![polygons isKindOfClass:NSArray.class]) {
             polygons = @[polygons];
         }
+        NSMutableArray<CountryPart*> * parts = [NSMutableArray new];
         for (MKPolygon * polygon in polygons) {
             NSParameterAssert([polygon isKindOfClass:MKPolygon.class]);
+            CountryPart * part = [CountryPart polygonWithPoints:polygon.points count:polygon.pointCount];
+            part.country = self;
+            [parts addObject:part];
         }
-        self.polygons = polygons;
+        self.parts = parts;
     }
-    return _polygons;
+    return _parts;
 }
 
 @end

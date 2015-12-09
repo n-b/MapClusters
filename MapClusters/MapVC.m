@@ -72,7 +72,7 @@
     [self clearMapContents];
     self.mapView.hidden = NO;
     for (Country* country in self.store.countries) {
-        [self.mapView addOverlays:country.polygons];
+        [self.mapView addOverlays:country.parts];
         [self.mapView addAnnotation:country];
     }
 }
@@ -109,7 +109,7 @@
     if([annotation isKindOfClass:CCHMapClusterAnnotation.class]){
         [(CCHMapClusterAnnotation*)annotation setDelegate:self];
     }
-    MKPinAnnotationView * view = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapClusters"];
+    MKAnnotationView * view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapClusters"];
     if(nil==view) {
         view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapClusters"];
     }
@@ -138,13 +138,23 @@
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
 {
-    if([overlay isKindOfClass:MKPolygon.class]) {
+    if([overlay isKindOfClass:CountryPart.class]) {
         MKPolygonRenderer * renderer = [[MKPolygonRenderer alloc] initWithOverlay:overlay];
-        renderer.strokeColor = NSColor.grayColor;
+        renderer.strokeColor = [NSColor.grayColor colorWithAlphaComponent:.1];
         renderer.lineWidth = 1;
+        Country * country = [(CountryPart*)overlay country];
+        if(country.stations.count>1000) {
+            renderer.fillColor = [NSColor.greenColor colorWithAlphaComponent:.3];
+        } else if(country.stations.count>10) {
+            renderer.fillColor = [NSColor.greenColor colorWithAlphaComponent:.2];
+        } else {
+            renderer.fillColor = [NSColor.greenColor colorWithAlphaComponent:.1];
+        }
         return renderer;
-    } else {
+    } else if([overlay isKindOfClass:StationsStore.class]) {
         return [[StationsOverlayRenderer alloc] initWithOverlay:overlay];
+    } else {
+        return nil;
     }
 }
 
