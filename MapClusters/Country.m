@@ -30,7 +30,11 @@
 - (CLLocationCoordinate2D)coordinate
 {
     if(!CLLocationCoordinate2DIsValid(_coordinate)) {
-        _coordinate = self.polygons.firstObject.coordinate;
+        CLLocationDegrees maxLatitude = [[self.stations valueForKeyPath:@"@max.latitude"] doubleValue];
+        CLLocationDegrees minLatitude = [[self.stations valueForKeyPath:@"@min.latitude"] doubleValue];
+        CLLocationDegrees maxLongitude = [[self.stations valueForKeyPath:@"@max.longitude"] doubleValue];
+        CLLocationDegrees minLongitude = [[self.stations valueForKeyPath:@"@min.longitude"] doubleValue];
+        _coordinate = CLLocationCoordinate2DMake((minLatitude+maxLatitude)/2.0, (minLongitude+maxLongitude)/2.0);
     }
     return _coordinate;
 }
@@ -54,4 +58,5 @@
     }
     return _polygons;
 }
+
 @end
