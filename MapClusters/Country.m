@@ -30,11 +30,9 @@
 - (CLLocationCoordinate2D)coordinate
 {
     if(!CLLocationCoordinate2DIsValid(_coordinate)) {
-        CLLocationDegrees maxLatitude = [[self.stations valueForKeyPath:@"@max.latitude"] doubleValue];
-        CLLocationDegrees minLatitude = [[self.stations valueForKeyPath:@"@min.latitude"] doubleValue];
-        CLLocationDegrees maxLongitude = [[self.stations valueForKeyPath:@"@max.longitude"] doubleValue];
-        CLLocationDegrees minLongitude = [[self.stations valueForKeyPath:@"@min.longitude"] doubleValue];
-        _coordinate = CLLocationCoordinate2DMake((minLatitude+maxLatitude)/2.0, (minLongitude+maxLongitude)/2.0);
+        CLLocationDegrees avgLongitude = [[self.stations valueForKeyPath:@"@avg.longitude"] doubleValue];
+        CLLocationDegrees avgLatitude = [[self.stations valueForKeyPath:@"@avg.latitude"] doubleValue];
+        _coordinate = CLLocationCoordinate2DMake(avgLatitude, avgLongitude);
     }
     return _coordinate;
 }
