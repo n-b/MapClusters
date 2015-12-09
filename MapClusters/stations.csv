@@ -7269,7 +7269,7 @@ id;name;slug;uic;uic8_sncf;longitude;latitude;parent_station_id;is_city;country;
 8684;Cerdeira;cerdeira;9494018;;;;;f;PT;f;Europe/Lisbon;f;PTAAL;;f;;f;;f;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;
 8685;Viana do castelo;viana-do-castelo;9406437;;;;;f;PT;f;Europe/Lisbon;f;PTAAM;;f;;f;;f;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;
 8686;Abrantes;abrantes;9452001;;;;;f;PT;f;Europe/Lisbon;f;PTAAN;;f;;f;;f;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;
-8687;Torre;torre;9431822;;-0.967329;37.746981;;f;PT;f;Europe/Lisbon;f;PTAAO;;f;;f;7100480;f;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;
+8687;Torre;torre;9431822;;0;0;;f;PT;f;Europe/Lisbon;f;PTAAO;;f;;f;7100480;f;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;
 8688;Marvao beira;marvao-beira;9458651;;;;;f;PT;f;Europe/Lisbon;f;PTAAP;;f;;f;;f;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;
 8689;Figueira da foz;figueira-da-foz;9464113;;;;;f;PT;f;Europe/Lisbon;f;PTAAQ;;f;;f;;f;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;
 8690;Caldas da rainha;caldas-da-rainha;9463008;;;;;f;PT;f;Europe/Lisbon;f;PTAAR;;f;;f;;f;;f;;f;;f;;f;;f;f;;;;;;;;;;;;;;;;;;
