@@ -1,10 +1,11 @@
 #import "StationsStore.h"
 #import "Station.h"
+#import "Country.h"
 #import "StationsImporter.h"
 
 @interface StationsStore () <StationsImporterDelegate>
 @property NSArray<Station*>* stations;
-@property NSDictionary<NSString*,NSArray<Station*>*>* countries;
+@property NSArray<Country*>* countries;
 @end
 
 @implementation StationsStore
@@ -32,14 +33,24 @@
     self.stations = _importStations.copy;
     _importStations = nil;
     
-    NSMutableDictionary<NSString*,NSMutableArray<Station*>*>* countries = [NSMutableDictionary new];
+    NSMutableDictionary<NSString*,NSMutableArray<Station*>*>* countriesStations = [NSMutableDictionary new];
     for (Station* station in self.stations) {
-        NSMutableArray * countryStations = countries[station.country];
+        NSString* countryName = station.country;
+        NSMutableArray * countryStations = countriesStations[countryName];
         if(countryStations==nil) {
             countryStations = [NSMutableArray new];
-            countries[station.country] = countryStations;
+            countriesStations[countryName] = countryStations;
         }
         [countryStations addObject:station];
+    }
+    
+    NSMutableArray<Country*>* countries = [NSMutableArray new];
+    for (NSString* countryName in countriesStations) {
+        NSArray<Station*>* stations = countriesStations[countryName];
+        Country * country = [Country new];
+        country.stations = stations;
+        country.name = countryName;
+        [countries addObject:country];
     }
     self.countries = countries.copy;
 }

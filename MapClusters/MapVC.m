@@ -2,7 +2,7 @@
 @import MapKit;
 #import "StationsStore.h"
 #import "Station.h"
-#import "GeoJSONSerialization.h"
+#import "Country.h"
 
 // Clusterers
 #import "CCHMapClusterController.h"
@@ -43,26 +43,9 @@
     // CCHMapClusterController
 //    [self.mapClusterController addAnnotations:self.store.stations withCompletionHandler:NULL];
     
-    for (NSString* country in self.store.countries) {
-        NSArray * stations = self.store.countries[country];
-        NSURL *URL = [[NSBundle mainBundle] URLForResource:country withExtension:@"json"];
-        NSData *data = [NSData dataWithContentsOfURL:URL];
-        NSArray *geoJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSParameterAssert(geoJSON.count==1);
-        NSError * error;
-        NSArray<MKShape*>* shapes = (id)[GeoJSONSerialization shapeFromGeoJSONFeature:geoJSON.firstObject error:&error];
-        if(![shapes isKindOfClass:NSArray.class]) {
-            shapes = @[shapes];
-        }
-        for (MKShape * shape in shapes) {
-            NSParameterAssert([shape conformsToProtocol:@protocol(MKOverlay)]);
-            [self.mapView addOverlay:(id <MKOverlay>)shape];
-        }
-        MKPointAnnotation * center = [MKPointAnnotation new];
-        center.title = country;
-        center.subtitle = [NSString stringWithFormat:@"%lu stations",(unsigned long)stations.count];
-        center.coordinate = shapes.firstObject.coordinate;
-        [self.mapView addAnnotation:center];
+    for (Country* country in self.store.countries) {
+        [self.mapView addOverlays:country.polygons];
+        [self.mapView addAnnotation:country];
     }
 }
 

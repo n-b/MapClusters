@@ -33,6 +33,7 @@
 		3706E2831C187B1B00E8A931 /* SI.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E26F1C187B1B00E8A931 /* SI.json */; };
 		3706E2841C187B1B00E8A931 /* SK.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2701C187B1B00E8A931 /* SK.json */; };
 		3706E2861C18829A00E8A931 /* HR.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2851C18829A00E8A931 /* HR.json */; };
+		3706E2891C18907B00E8A931 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2881C18907B00E8A931 /* Country.m */; };
 		37A9A39E1C182B420079499A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A9A39D1C182B420079499A /* MapKit.framework */; };
 		37A9A3B21C18304A0079499A /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9A3AC1C18304A0079499A /* Station.m */; };
 		37A9A3B31C18304A0079499A /* stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = 37A9A3AD1C18304A0079499A /* stations.csv */; };
@@ -71,6 +72,8 @@
 		3706E26F1C187B1B00E8A931 /* SI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SI.json; sourceTree = "<group>"; };
 		3706E2701C187B1B00E8A931 /* SK.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SK.json; sourceTree = "<group>"; };
 		3706E2851C18829A00E8A931 /* HR.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HR.json; sourceTree = "<group>"; };
+		3706E2871C18907B00E8A931 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Country.h; path = MapClusters/Country.h; sourceTree = "<group>"; };
+		3706E2881C18907B00E8A931 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Country.m; path = MapClusters/Country.m; sourceTree = "<group>"; };
 		37A9A39D1C182B420079499A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37A9A3AB1C18304A0079499A /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Station.h; path = MapClusters/Station.h; sourceTree = "<group>"; };
 		37A9A3AC1C18304A0079499A /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Station.m; path = MapClusters/Station.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 			children = (
 				37A9A3AB1C18304A0079499A /* Station.h */,
 				37A9A3AC1C18304A0079499A /* Station.m */,
+				3706E2871C18907B00E8A931 /* Country.h */,
+				3706E2881C18907B00E8A931 /* Country.m */,
 				37A9A3AD1C18304A0079499A /* stations.csv */,
 				37A9A3AE1C18304A0079499A /* StationsImporter.h */,
 				37A9A3AF1C18304A0079499A /* StationsImporter.m */,
@@ -310,6 +315,7 @@
 				370161921C131DC400FF4703 /* MapVC.m in Sources */,
 				3701618F1C131DC400FF4703 /* MapClusters.m in Sources */,
 				37A9A3B51C18304A0079499A /* StationsStore.m in Sources */,
+				3706E2891C18907B00E8A931 /* Country.m in Sources */,
 				37A9A3B21C18304A0079499A /* Station.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
