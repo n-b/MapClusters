@@ -1,10 +1,13 @@
 PODS:
+  - CCHMapClusterController (1.6.6)
   - CHCSVParser (2.1.0)
 
 DEPENDENCIES:
+  - CCHMapClusterController (~> 1.6.6)
   - CHCSVParser (~> 2.1)
 
 SPEC CHECKSUMS:
+  CCHMapClusterController: 982db41114b42a575798366371bd9908e0f9ec8b
   CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
 
 COCOAPODS: 0.38.2

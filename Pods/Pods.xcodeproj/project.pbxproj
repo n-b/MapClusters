@@ -7,111 +7,174 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0442BD8404D80CB792994A426EBB4D51 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86564FCA9A7D748F095EE9261B34169 /* Cocoa.framework */; };
-		2659CC9C657C91995481B8C34BBACC39 /* CHCSVParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF0D216F9351C726B040780E0781BC9 /* CHCSVParser.h */; };
-		2864B5B0B093417DE0FB215F2C9506E6 /* Pods-MapClusters-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3B1B219533940D71AEB0233C6C04D3 /* Pods-MapClusters-dummy.m */; };
-		C20EEA9DBC8229C68212CF8E12011E45 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D84FB81B91E717134E2AB1A909DFA74 /* CHCSVParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CF2AE475DEB0AC26C9294E5C375BEA35 /* CHCSVParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE9C439D1847779E7FA1C0B25D76B0F /* CHCSVParser-dummy.m */; };
-		F88090DBCB285BD216D73DA5424F3E77 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86564FCA9A7D748F095EE9261B34169 /* Cocoa.framework */; };
+		04045E9A3F00EA03FB7FA9D8C17BD7E9 /* CHCSVParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E40C53BBDA09C7FDF11E45C868AC0F /* CHCSVParser-dummy.m */; };
+		0F4C6C90D2ADCB5B325EFB1347975605 /* CCHNearCenterMapClusterer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAAEFB9F84EB1A946F3540E719D0453 /* CCHNearCenterMapClusterer.m */; };
+		22C4354D8295CA674B5FC532B6A0F302 /* CHCSVParser.h in Headers */ = {isa = PBXBuildFile; fileRef = DA685D510E9EE36D1474D201C0FBA4AE /* CHCSVParser.h */; };
+		25133C551F5B23C9BC80793D85F71C21 /* CCHMapViewDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C51484E9DEE1415E85905EC3668BD5DC /* CCHMapViewDelegateProxy.h */; };
+		268631ED1FB894E5AB88DE56F90CD55D /* CCHCenterOfMassMapClusterer.m in Sources */ = {isa = PBXBuildFile; fileRef = C9442EEF851E3EA911FDBD65B332B2A9 /* CCHCenterOfMassMapClusterer.m */; };
+		27B448EEA15F661A28B81A7341350EA3 /* CCHCenterOfMassMapClusterer.h in Headers */ = {isa = PBXBuildFile; fileRef = 755FC671900E55502542A0736052355C /* CCHCenterOfMassMapClusterer.h */; };
+		288316F96918897D4391794D6AE062AA /* CCHMapClusterControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EC1204D857292A2A3748635358E5CF /* CCHMapClusterControllerUtils.m */; };
+		2F92B93B52D6D712A537B363CB5B7E5B /* CCHMapTreeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F61DB43CED5ECE85B9728644A98F407 /* CCHMapTreeUtils.h */; };
+		317A9027A4647A89FC1D097D8A538048 /* CCHMapClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5509AB8DF6069367E92D44912DA484 /* CCHMapClusterAnnotation.m */; };
+		3874D2417EAEA42294851CC5D0411814 /* Pods-MapClusters-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4241AF92300F358320197EC18238461 /* Pods-MapClusters-dummy.m */; };
+		3C319B15EAFC71184DE7CA51AA95E5BF /* CCHMapClusterControllerDebugPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A447B1E924D1EDC369E665226F6F45F /* CCHMapClusterControllerDebugPolygon.h */; };
+		41161BCA0AEE68184D1EE4A4977E5DC4 /* CCHNearCenterMapClusterer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3305B5DD9EC8717DE3E26FD35D81189B /* CCHNearCenterMapClusterer.h */; };
+		416D1A8F9BFDFE21BC4035CBEE033483 /* CCHMapClusterer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E1A376CD78626BF786F0AB1646B8E5C /* CCHMapClusterer.h */; };
+		4297F19A031786B84FCF99B2626F80EB /* CCHFadeInOutMapAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 93265ED16530156CCD324A87EA0A31C8 /* CCHFadeInOutMapAnimator.m */; };
+		4A2484A3C39B32C8005AA64262198A64 /* CCHMapTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F7034B85062F5E14A385741468A878 /* CCHMapTree.m */; };
+		56AE335C6DC15E724FD1DC4563B6DEC6 /* CCHMapClusterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F206A76E987F390DE00D77EDA71590F3 /* CCHMapClusterController.m */; };
+		6AABB98ACD9804FDBB8E3BA5B5C9391B /* CCHMapClusterControllerUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 167AFC4124E820FEE45156349214F894 /* CCHMapClusterControllerUtils.h */; };
+		7B88DD6F733E711188366BAC3CF835C9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3494A9C32F067AD6ECBE7927F164A6C /* CoreLocation.framework */; };
+		96DAB206E75AD10958751ADCBE63B7E7 /* CCHMapClusterControllerDebugPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0068F1080F3D642D49F6B19A00DFDFF4 /* CCHMapClusterControllerDebugPolygon.m */; };
+		97A1F1CC25686A7C9DB6D437BC4CF45A /* CCHMapClusterControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 42CF159D1980D75116F3DE44592B682D /* CCHMapClusterControllerDelegate.h */; };
+		A8ADE7362F2317129379E9C2586FEB3F /* CCHMapAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = E1AA7ED1BC1BB82284BBD0BD02B749BC /* CCHMapAnimator.h */; };
+		B67044E91EA1FD3B1228B2FFEAB3EDE8 /* CCHMapClusterController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A3BB5E9BB801DECA4C38317D02D04F /* CCHMapClusterController-dummy.m */; };
+		C46BB6AA42BEA8548FB3E96196BFF400 /* CCHMapClusterAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 95795A6247D7BC59D59177BBF639A438 /* CCHMapClusterAnnotation.h */; };
+		C4F0F6D92AAF5775E60A77F896842089 /* CCHFadeInOutMapAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = A2EB598BB6CA5391BF91D8870713E23F /* CCHFadeInOutMapAnimator.h */; };
+		C7C647CCD6BA5EDFAD1A6AA56287CDDA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88280503C1463817CF200E187933F4E5 /* Cocoa.framework */; };
+		CE7F034C06845B34BFDC1E4EB6CFAB59 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744BE63B3DFF62700FC4343B0062BC8E /* MapKit.framework */; };
+		D26E7B1105A37E850C156DB01FD8DC17 /* CCHMapClusterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E25C77DDA70274D4F2C63F3AF8939806 /* CCHMapClusterOperation.m */; };
+		D4D9419752CE3A3924638EA58335917C /* CCHMapViewDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75836C517935D804CC8F824C0F62F4B7 /* CCHMapViewDelegateProxy.m */; };
+		D5C968B48D1E53BBE2A834A38EE16A15 /* CCHMapClusterOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 558AED1A9ED2E984FF1486BB6B541A06 /* CCHMapClusterOperation.h */; };
+		D8E35D85117614CD4E430746B1FADEF3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88280503C1463817CF200E187933F4E5 /* Cocoa.framework */; };
+		E04197410E37A40E0A5DC7E86FA91675 /* CCHMapClusterController.h in Headers */ = {isa = PBXBuildFile; fileRef = E400BC6125BE9723740BC052F9B99950 /* CCHMapClusterController.h */; };
+		E1414E67E914EDF01157491DEFC6D65F /* CCHMapTree.h in Headers */ = {isa = PBXBuildFile; fileRef = AA589E0224E9AC0728C95C518B7D36D4 /* CCHMapTree.h */; };
+		F1BB4EA393266846BA7F4D8013388306 /* CCHMapTreeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B03EE19A4DA5EA70F536598F544DF353 /* CCHMapTreeUtils.m */; };
+		F6E2C6E54515F5465DD7820ABEFD7BBD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88280503C1463817CF200E187933F4E5 /* Cocoa.framework */; };
+		FA2C0E6EF7025C5D1208BD9F278896C1 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEB13DB6FBF78A6AE68974BDD853949 /* CHCSVParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7E114D595923B081D00874A5FB8A4C32 /* PBXContainerItemProxy */ = {
+		2E1F1A3B1671496D8787E9758419FE30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A88EB07374DC4C58AD10F21430BB9B30;
+			remoteGlobalIDString = 14C2BB2785A901B0BBA99A13E2AFB4B5;
 			remoteInfo = CHCSVParser;
+		};
+		BB0098620C0381613888ADB1F8C8F773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7156704A22FBCCF8322CE2938FBEFED;
+			remoteInfo = CCHMapClusterController;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0691B3B9F7071A56A2D781FD45D4497B /* CHCSVParser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHCSVParser.xcconfig; sourceTree = "<group>"; };
-		1FEFE350F70D9485C4EABA9DFCD51FDD /* Pods-MapClusters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapClusters.debug.xcconfig"; sourceTree = "<group>"; };
-		22BA637BDF76F55DAE49280029B38FB7 /* Pods-MapClusters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapClusters.release.xcconfig"; sourceTree = "<group>"; };
-		3D84FB81B91E717134E2AB1A909DFA74 /* CHCSVParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = CHCSVParser/CHCSVParser/CHCSVParser.m; sourceTree = "<group>"; };
-		6BF0D216F9351C726B040780E0781BC9 /* CHCSVParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = CHCSVParser/CHCSVParser/CHCSVParser.h; sourceTree = "<group>"; };
-		831212358D3C1E1423C0D339C3E38F1D /* libPods-MapClusters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MapClusters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0068F1080F3D642D49F6B19A00DFDFF4 /* CCHMapClusterControllerDebugPolygon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHMapClusterControllerDebugPolygon.m; path = CCHMapClusterController/CCHMapClusterControllerDebugPolygon.m; sourceTree = "<group>"; };
+		09F870A17DCD8A8F7F8FDB3C9AA357F8 /* libPods-MapClusters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MapClusters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A447B1E924D1EDC369E665226F6F45F /* CCHMapClusterControllerDebugPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterControllerDebugPolygon.h; path = CCHMapClusterController/CCHMapClusterControllerDebugPolygon.h; sourceTree = "<group>"; };
+		13F7034B85062F5E14A385741468A878 /* CCHMapTree.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHMapTree.m; path = CCHMapClusterController/CCHMapTree.m; sourceTree = "<group>"; };
+		167AFC4124E820FEE45156349214F894 /* CCHMapClusterControllerUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterControllerUtils.h; path = CCHMapClusterController/CCHMapClusterControllerUtils.h; sourceTree = "<group>"; };
+		24234E51EC0F03153710EB89657903A2 /* CCHMapClusterController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CCHMapClusterController-Private.xcconfig"; sourceTree = "<group>"; };
+		25EC1204D857292A2A3748635358E5CF /* CCHMapClusterControllerUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHMapClusterControllerUtils.m; path = CCHMapClusterController/CCHMapClusterControllerUtils.m; sourceTree = "<group>"; };
+		294F7D20BEC35F16CB8E39FC1A13026B /* libCHCSVParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCHCSVParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3305B5DD9EC8717DE3E26FD35D81189B /* CCHNearCenterMapClusterer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHNearCenterMapClusterer.h; path = CCHMapClusterController/CCHNearCenterMapClusterer.h; sourceTree = "<group>"; };
+		37D5A83377D8C1314AA98A7763B69876 /* CHCSVParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHCSVParser-prefix.pch"; sourceTree = "<group>"; };
+		3A7CC8842771BC02FDFCDC349702290A /* Pods-MapClusters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapClusters.debug.xcconfig"; sourceTree = "<group>"; };
+		3E1A376CD78626BF786F0AB1646B8E5C /* CCHMapClusterer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterer.h; path = CCHMapClusterController/CCHMapClusterer.h; sourceTree = "<group>"; };
+		42CF159D1980D75116F3DE44592B682D /* CCHMapClusterControllerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterControllerDelegate.h; path = CCHMapClusterController/CCHMapClusterControllerDelegate.h; sourceTree = "<group>"; };
+		5157C67553C1EE7674415A21158DA85D /* libCCHMapClusterController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCHMapClusterController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		558AED1A9ED2E984FF1486BB6B541A06 /* CCHMapClusterOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterOperation.h; path = CCHMapClusterController/CCHMapClusterOperation.h; sourceTree = "<group>"; };
+		65E40C53BBDA09C7FDF11E45C868AC0F /* CHCSVParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHCSVParser-dummy.m"; sourceTree = "<group>"; };
+		6F61DB43CED5ECE85B9728644A98F407 /* CCHMapTreeUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapTreeUtils.h; path = CCHMapClusterController/CCHMapTreeUtils.h; sourceTree = "<group>"; };
+		744BE63B3DFF62700FC4343B0062BC8E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		755FC671900E55502542A0736052355C /* CCHCenterOfMassMapClusterer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHCenterOfMassMapClusterer.h; path = CCHMapClusterController/CCHCenterOfMassMapClusterer.h; sourceTree = "<group>"; };
+		75836C517935D804CC8F824C0F62F4B7 /* CCHMapViewDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHMapViewDelegateProxy.m; path = CCHMapClusterController/CCHMapViewDelegateProxy.m; sourceTree = "<group>"; };
+		7AAAEFB9F84EB1A946F3540E719D0453 /* CCHNearCenterMapClusterer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHNearCenterMapClusterer.m; path = CCHMapClusterController/CCHNearCenterMapClusterer.m; sourceTree = "<group>"; };
+		88280503C1463817CF200E187933F4E5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		93265ED16530156CCD324A87EA0A31C8 /* CCHFadeInOutMapAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHFadeInOutMapAnimator.m; path = CCHMapClusterController/CCHFadeInOutMapAnimator.m; sourceTree = "<group>"; };
+		95795A6247D7BC59D59177BBF639A438 /* CCHMapClusterAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterAnnotation.h; path = CCHMapClusterController/CCHMapClusterAnnotation.h; sourceTree = "<group>"; };
 		972626F60B967D6DD7E6BE8EC2F79484 /* Pods-MapClusters-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MapClusters-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9CCF7E2448E9081C604AFAB963341AA0 /* CHCSVParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CHCSVParser-prefix.pch"; sourceTree = "<group>"; };
-		9D6D889BAFA98B2E055E757AA302F8DF /* CHCSVParser-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CHCSVParser-Private.xcconfig"; sourceTree = "<group>"; };
-		A86564FCA9A7D748F095EE9261B34169 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		9EC51B264CB8BCEA4067D79114E90B75 /* CCHMapClusterController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CCHMapClusterController.xcconfig; sourceTree = "<group>"; };
+		A2EB598BB6CA5391BF91D8870713E23F /* CCHFadeInOutMapAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHFadeInOutMapAnimator.h; path = CCHMapClusterController/CCHFadeInOutMapAnimator.h; sourceTree = "<group>"; };
+		A430DEC06D6759FD085C67ABFC184A80 /* Pods-MapClusters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapClusters.release.xcconfig"; sourceTree = "<group>"; };
+		AA589E0224E9AC0728C95C518B7D36D4 /* CCHMapTree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapTree.h; path = CCHMapClusterController/CCHMapTree.h; sourceTree = "<group>"; };
+		AB25DCFFA02A630F21AB120283F9CDED /* CCHMapClusterController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CCHMapClusterController-prefix.pch"; sourceTree = "<group>"; };
+		B03EE19A4DA5EA70F536598F544DF353 /* CCHMapTreeUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHMapTreeUtils.m; path = CCHMapClusterController/CCHMapTreeUtils.m; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CC3B1B219533940D71AEB0233C6C04D3 /* Pods-MapClusters-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MapClusters-dummy.m"; sourceTree = "<group>"; };
-		CEE9C439D1847779E7FA1C0B25D76B0F /* CHCSVParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CHCSVParser-dummy.m"; sourceTree = "<group>"; };
+		BCEB13DB6FBF78A6AE68974BDD853949 /* CHCSVParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = CHCSVParser/CHCSVParser/CHCSVParser.m; sourceTree = "<group>"; };
+		C4241AF92300F358320197EC18238461 /* Pods-MapClusters-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MapClusters-dummy.m"; sourceTree = "<group>"; };
+		C456D6E47915C81804DFCEA6B6763DB9 /* CHCSVParser-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CHCSVParser-Private.xcconfig"; sourceTree = "<group>"; };
+		C51484E9DEE1415E85905EC3668BD5DC /* CCHMapViewDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapViewDelegateProxy.h; path = CCHMapClusterController/CCHMapViewDelegateProxy.h; sourceTree = "<group>"; };
+		C9442EEF851E3EA911FDBD65B332B2A9 /* CCHCenterOfMassMapClusterer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHCenterOfMassMapClusterer.m; path = CCHMapClusterController/CCHCenterOfMassMapClusterer.m; sourceTree = "<group>"; };
+		D3494A9C32F067AD6ECBE7927F164A6C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		D43772D677FF41337AA96E8E58A1FD75 /* Pods-MapClusters-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapClusters-acknowledgements.plist"; sourceTree = "<group>"; };
-		E2D3A3377937042584ACAF6DF2CD3F72 /* libCHCSVParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCHCSVParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D897BE0E0363CE90D9E1E4E78BF034BB /* CHCSVParser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CHCSVParser.xcconfig; sourceTree = "<group>"; };
+		DA685D510E9EE36D1474D201C0FBA4AE /* CHCSVParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = CHCSVParser/CHCSVParser/CHCSVParser.h; sourceTree = "<group>"; };
+		DC5509AB8DF6069367E92D44912DA484 /* CCHMapClusterAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHMapClusterAnnotation.m; path = CCHMapClusterController/CCHMapClusterAnnotation.m; sourceTree = "<group>"; };
+		E1AA7ED1BC1BB82284BBD0BD02B749BC /* CCHMapAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapAnimator.h; path = CCHMapClusterController/CCHMapAnimator.h; sourceTree = "<group>"; };
+		E25C77DDA70274D4F2C63F3AF8939806 /* CCHMapClusterOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHMapClusterOperation.m; path = CCHMapClusterController/CCHMapClusterOperation.m; sourceTree = "<group>"; };
+		E400BC6125BE9723740BC052F9B99950 /* CCHMapClusterController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterController.h; path = CCHMapClusterController/CCHMapClusterController.h; sourceTree = "<group>"; };
+		F0A3BB5E9BB801DECA4C38317D02D04F /* CCHMapClusterController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CCHMapClusterController-dummy.m"; sourceTree = "<group>"; };
+		F206A76E987F390DE00D77EDA71590F3 /* CCHMapClusterController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCHMapClusterController.m; path = CCHMapClusterController/CCHMapClusterController.m; sourceTree = "<group>"; };
 		FF6B4D280CAEC11EE9A9FC71D51464F8 /* Pods-MapClusters-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MapClusters-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		098E09673C33250421AAD76AF9254D07 /* Frameworks */ = {
+		0506DBCA3B9D9652A466F3F9C5AAC115 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F88090DBCB285BD216D73DA5424F3E77 /* Cocoa.framework in Frameworks */,
+				F6E2C6E54515F5465DD7820ABEFD7BBD /* Cocoa.framework in Frameworks */,
+				7B88DD6F733E711188366BAC3CF835C9 /* CoreLocation.framework in Frameworks */,
+				CE7F034C06845B34BFDC1E4EB6CFAB59 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F02001E45AF5A8789944B8E47C3D5B5B /* Frameworks */ = {
+		771E09DAFE5162FA109272DA18A7A62A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0442BD8404D80CB792994A426EBB4D51 /* Cocoa.framework in Frameworks */,
+				D8E35D85117614CD4E430746B1FADEF3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2C5200C5BA7E13DEA7517ACC6A9F0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C647CCD6BA5EDFAD1A6AA56287CDDA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17D90588BA0744186BDDC5DECDAFD90A /* Pods-MapClusters */ = {
+		01FBDEF416C85B213A4CDEC66E07C4F6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				972626F60B967D6DD7E6BE8EC2F79484 /* Pods-MapClusters-acknowledgements.markdown */,
-				D43772D677FF41337AA96E8E58A1FD75 /* Pods-MapClusters-acknowledgements.plist */,
-				CC3B1B219533940D71AEB0233C6C04D3 /* Pods-MapClusters-dummy.m */,
-				FF6B4D280CAEC11EE9A9FC71D51464F8 /* Pods-MapClusters-resources.sh */,
-				1FEFE350F70D9485C4EABA9DFCD51FDD /* Pods-MapClusters.debug.xcconfig */,
-				22BA637BDF76F55DAE49280029B38FB7 /* Pods-MapClusters.release.xcconfig */,
-			);
-			name = "Pods-MapClusters";
-			path = "Target Support Files/Pods-MapClusters";
-			sourceTree = "<group>";
-		};
-		2BCCF9E7DC08FAEC719B6A6C0F7D57AD /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				A86564FCA9A7D748F095EE9261B34169 /* Cocoa.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		2C5E0249054B4C20AD68357434D9D550 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0691B3B9F7071A56A2D781FD45D4497B /* CHCSVParser.xcconfig */,
-				9D6D889BAFA98B2E055E757AA302F8DF /* CHCSVParser-Private.xcconfig */,
-				CEE9C439D1847779E7FA1C0B25D76B0F /* CHCSVParser-dummy.m */,
-				9CCF7E2448E9081C604AFAB963341AA0 /* CHCSVParser-prefix.pch */,
+				D897BE0E0363CE90D9E1E4E78BF034BB /* CHCSVParser.xcconfig */,
+				C456D6E47915C81804DFCEA6B6763DB9 /* CHCSVParser-Private.xcconfig */,
+				65E40C53BBDA09C7FDF11E45C868AC0F /* CHCSVParser-dummy.m */,
+				37D5A83377D8C1314AA98A7763B69876 /* CHCSVParser-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CHCSVParser";
 			sourceTree = "<group>";
 		};
-		3423D63DD97844C6BCFB0F1D757FCA5C /* Pods */ = {
+		054F02B5A21FEE538A23B7AA81842402 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F2D7889853F14545B2EA1F5476BAE8A8 /* CHCSVParser */,
+				4D2AB93AD5C52A9070CF2AD411323983 /* CCHMapClusterController */,
+				B1D9041B316CC134A3E1622A56D9CDC5 /* CHCSVParser */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+		17D90588BA0744186BDDC5DECDAFD90A /* Pods-MapClusters */ = {
 			isa = PBXGroup;
 			children = (
-				2BCCF9E7DC08FAEC719B6A6C0F7D57AD /* OS X */,
+				972626F60B967D6DD7E6BE8EC2F79484 /* Pods-MapClusters-acknowledgements.markdown */,
+				D43772D677FF41337AA96E8E58A1FD75 /* Pods-MapClusters-acknowledgements.plist */,
+				C4241AF92300F358320197EC18238461 /* Pods-MapClusters-dummy.m */,
+				FF6B4D280CAEC11EE9A9FC71D51464F8 /* Pods-MapClusters-resources.sh */,
+				3A7CC8842771BC02FDFCDC349702290A /* Pods-MapClusters.debug.xcconfig */,
+				A430DEC06D6759FD085C67ABFC184A80 /* Pods-MapClusters.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-MapClusters";
+			path = "Target Support Files/Pods-MapClusters";
 			sourceTree = "<group>";
 		};
 		401A0A37218EA490B4C5A199262A157D /* Targets Support Files */ = {
@@ -122,74 +185,142 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		4D2AB93AD5C52A9070CF2AD411323983 /* CCHMapClusterController */ = {
+			isa = PBXGroup;
+			children = (
+				755FC671900E55502542A0736052355C /* CCHCenterOfMassMapClusterer.h */,
+				C9442EEF851E3EA911FDBD65B332B2A9 /* CCHCenterOfMassMapClusterer.m */,
+				A2EB598BB6CA5391BF91D8870713E23F /* CCHFadeInOutMapAnimator.h */,
+				93265ED16530156CCD324A87EA0A31C8 /* CCHFadeInOutMapAnimator.m */,
+				E1AA7ED1BC1BB82284BBD0BD02B749BC /* CCHMapAnimator.h */,
+				95795A6247D7BC59D59177BBF639A438 /* CCHMapClusterAnnotation.h */,
+				DC5509AB8DF6069367E92D44912DA484 /* CCHMapClusterAnnotation.m */,
+				E400BC6125BE9723740BC052F9B99950 /* CCHMapClusterController.h */,
+				F206A76E987F390DE00D77EDA71590F3 /* CCHMapClusterController.m */,
+				0A447B1E924D1EDC369E665226F6F45F /* CCHMapClusterControllerDebugPolygon.h */,
+				0068F1080F3D642D49F6B19A00DFDFF4 /* CCHMapClusterControllerDebugPolygon.m */,
+				42CF159D1980D75116F3DE44592B682D /* CCHMapClusterControllerDelegate.h */,
+				167AFC4124E820FEE45156349214F894 /* CCHMapClusterControllerUtils.h */,
+				25EC1204D857292A2A3748635358E5CF /* CCHMapClusterControllerUtils.m */,
+				558AED1A9ED2E984FF1486BB6B541A06 /* CCHMapClusterOperation.h */,
+				E25C77DDA70274D4F2C63F3AF8939806 /* CCHMapClusterOperation.m */,
+				3E1A376CD78626BF786F0AB1646B8E5C /* CCHMapClusterer.h */,
+				AA589E0224E9AC0728C95C518B7D36D4 /* CCHMapTree.h */,
+				13F7034B85062F5E14A385741468A878 /* CCHMapTree.m */,
+				6F61DB43CED5ECE85B9728644A98F407 /* CCHMapTreeUtils.h */,
+				B03EE19A4DA5EA70F536598F544DF353 /* CCHMapTreeUtils.m */,
+				C51484E9DEE1415E85905EC3668BD5DC /* CCHMapViewDelegateProxy.h */,
+				75836C517935D804CC8F824C0F62F4B7 /* CCHMapViewDelegateProxy.m */,
+				3305B5DD9EC8717DE3E26FD35D81189B /* CCHNearCenterMapClusterer.h */,
+				7AAAEFB9F84EB1A946F3540E719D0453 /* CCHNearCenterMapClusterer.m */,
+				EC2206A939940D95D45037CC94A3F49D /* Support Files */,
+			);
+			path = CCHMapClusterController;
+			sourceTree = "<group>";
+		};
+		5692E01B504592AF1902C6446E0B3D09 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				88280503C1463817CF200E187933F4E5 /* Cocoa.framework */,
+				D3494A9C32F067AD6ECBE7927F164A6C /* CoreLocation.framework */,
+				744BE63B3DFF62700FC4343B0062BC8E /* MapKit.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				3423D63DD97844C6BCFB0F1D757FCA5C /* Pods */,
+				96D996393384F21972E2DD81788EE22C /* Frameworks */,
+				054F02B5A21FEE538A23B7AA81842402 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				401A0A37218EA490B4C5A199262A157D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
+		96D996393384F21972E2DD81788EE22C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5692E01B504592AF1902C6446E0B3D09 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1D9041B316CC134A3E1622A56D9CDC5 /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				DA685D510E9EE36D1474D201C0FBA4AE /* CHCSVParser.h */,
+				BCEB13DB6FBF78A6AE68974BDD853949 /* CHCSVParser.m */,
+				01FBDEF416C85B213A4CDEC66E07C4F6 /* Support Files */,
+			);
+			path = CHCSVParser;
+			sourceTree = "<group>";
+		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2D3A3377937042584ACAF6DF2CD3F72 /* libCHCSVParser.a */,
-				831212358D3C1E1423C0D339C3E38F1D /* libPods-MapClusters.a */,
+				5157C67553C1EE7674415A21158DA85D /* libCCHMapClusterController.a */,
+				294F7D20BEC35F16CB8E39FC1A13026B /* libCHCSVParser.a */,
+				09F870A17DCD8A8F7F8FDB3C9AA357F8 /* libPods-MapClusters.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F2D7889853F14545B2EA1F5476BAE8A8 /* CHCSVParser */ = {
+		EC2206A939940D95D45037CC94A3F49D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6BF0D216F9351C726B040780E0781BC9 /* CHCSVParser.h */,
-				3D84FB81B91E717134E2AB1A909DFA74 /* CHCSVParser.m */,
-				2C5E0249054B4C20AD68357434D9D550 /* Support Files */,
+				9EC51B264CB8BCEA4067D79114E90B75 /* CCHMapClusterController.xcconfig */,
+				24234E51EC0F03153710EB89657903A2 /* CCHMapClusterController-Private.xcconfig */,
+				F0A3BB5E9BB801DECA4C38317D02D04F /* CCHMapClusterController-dummy.m */,
+				AB25DCFFA02A630F21AB120283F9CDED /* CCHMapClusterController-prefix.pch */,
 			);
-			path = CHCSVParser;
+			name = "Support Files";
+			path = "../Target Support Files/CCHMapClusterController";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EB73F6DAB8877B61E1093184B7196FEA /* Headers */ = {
+		31F730ADE2817B2E1D7348020AB497D1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2659CC9C657C91995481B8C34BBACC39 /* CHCSVParser.h in Headers */,
+				27B448EEA15F661A28B81A7341350EA3 /* CCHCenterOfMassMapClusterer.h in Headers */,
+				C4F0F6D92AAF5775E60A77F896842089 /* CCHFadeInOutMapAnimator.h in Headers */,
+				A8ADE7362F2317129379E9C2586FEB3F /* CCHMapAnimator.h in Headers */,
+				C46BB6AA42BEA8548FB3E96196BFF400 /* CCHMapClusterAnnotation.h in Headers */,
+				E04197410E37A40E0A5DC7E86FA91675 /* CCHMapClusterController.h in Headers */,
+				3C319B15EAFC71184DE7CA51AA95E5BF /* CCHMapClusterControllerDebugPolygon.h in Headers */,
+				97A1F1CC25686A7C9DB6D437BC4CF45A /* CCHMapClusterControllerDelegate.h in Headers */,
+				6AABB98ACD9804FDBB8E3BA5B5C9391B /* CCHMapClusterControllerUtils.h in Headers */,
+				D5C968B48D1E53BBE2A834A38EE16A15 /* CCHMapClusterOperation.h in Headers */,
+				416D1A8F9BFDFE21BC4035CBEE033483 /* CCHMapClusterer.h in Headers */,
+				E1414E67E914EDF01157491DEFC6D65F /* CCHMapTree.h in Headers */,
+				2F92B93B52D6D712A537B363CB5B7E5B /* CCHMapTreeUtils.h in Headers */,
+				25133C551F5B23C9BC80793D85F71C21 /* CCHMapViewDelegateProxy.h in Headers */,
+				41161BCA0AEE68184D1EE4A4977E5DC4 /* CCHNearCenterMapClusterer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3755003686F8102B00D2FA9349C445CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C4354D8295CA674B5FC532B6A0F302 /* CHCSVParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		65C7CE8B376A08EA02EDE4B769D0C836 /* Pods-MapClusters */ = {
+		14C2BB2785A901B0BBA99A13E2AFB4B5 /* CHCSVParser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B60F95D5FFFD9CB4B8F350230F50527E /* Build configuration list for PBXNativeTarget "Pods-MapClusters" */;
+			buildConfigurationList = A9AE2B420BB3F4DD9A1E9DC62931D720 /* Build configuration list for PBXNativeTarget "CHCSVParser" */;
 			buildPhases = (
-				63556C95BE0FEA434A3CE9FD1C6FD92D /* Sources */,
-				F02001E45AF5A8789944B8E47C3D5B5B /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BDECA5EA2F9ED34C8056CB0955F1CC3 /* PBXTargetDependency */,
-			);
-			name = "Pods-MapClusters";
-			productName = "Pods-MapClusters";
-			productReference = 831212358D3C1E1423C0D339C3E38F1D /* libPods-MapClusters.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A88EB07374DC4C58AD10F21430BB9B30 /* CHCSVParser */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BFF15B0F9EEEEDDC20D1041FCC3AAD19 /* Build configuration list for PBXNativeTarget "CHCSVParser" */;
-			buildPhases = (
-				847263A40F25CAA4EF6C0275563C7DB3 /* Sources */,
-				098E09673C33250421AAD76AF9254D07 /* Frameworks */,
-				EB73F6DAB8877B61E1093184B7196FEA /* Headers */,
+				335E0C13F5EAEB22762B3B7431B8CE68 /* Sources */,
+				EB2C5200C5BA7E13DEA7517ACC6A9F0F /* Frameworks */,
+				3755003686F8102B00D2FA9349C445CD /* Headers */,
 			);
 			buildRules = (
 			);
@@ -197,7 +328,42 @@
 			);
 			name = CHCSVParser;
 			productName = CHCSVParser;
-			productReference = E2D3A3377937042584ACAF6DF2CD3F72 /* libCHCSVParser.a */;
+			productReference = 294F7D20BEC35F16CB8E39FC1A13026B /* libCHCSVParser.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7151FD0DCAE35165F4A99618446D5A4C /* Pods-MapClusters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 833D7F72502EC958799B9C670C63CDD4 /* Build configuration list for PBXNativeTarget "Pods-MapClusters" */;
+			buildPhases = (
+				BA303C8D4D45949E72E7924A69D428DD /* Sources */,
+				771E09DAFE5162FA109272DA18A7A62A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E04690AC2367302DF77FD686BCA7F1D1 /* PBXTargetDependency */,
+				D4061277B14CB79F5CF1AE83F1A380FC /* PBXTargetDependency */,
+			);
+			name = "Pods-MapClusters";
+			productName = "Pods-MapClusters";
+			productReference = 09F870A17DCD8A8F7F8FDB3C9AA357F8 /* libPods-MapClusters.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B7156704A22FBCCF8322CE2938FBEFED /* CCHMapClusterController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10892C2413F32913B8461AE9B911C91 /* Build configuration list for PBXNativeTarget "CCHMapClusterController" */;
+			buildPhases = (
+				E2CFB7038634F76A7D36D601F70494FF /* Sources */,
+				0506DBCA3B9D9652A466F3F9C5AAC115 /* Frameworks */,
+				31F730ADE2817B2E1D7348020AB497D1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCHMapClusterController;
+			productName = CCHMapClusterController;
+			productReference = 5157C67553C1EE7674415A21158DA85D /* libCCHMapClusterController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -221,38 +387,64 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A88EB07374DC4C58AD10F21430BB9B30 /* CHCSVParser */,
-				65C7CE8B376A08EA02EDE4B769D0C836 /* Pods-MapClusters */,
+				B7156704A22FBCCF8322CE2938FBEFED /* CCHMapClusterController */,
+				14C2BB2785A901B0BBA99A13E2AFB4B5 /* CHCSVParser */,
+				7151FD0DCAE35165F4A99618446D5A4C /* Pods-MapClusters */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		63556C95BE0FEA434A3CE9FD1C6FD92D /* Sources */ = {
+		335E0C13F5EAEB22762B3B7431B8CE68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2864B5B0B093417DE0FB215F2C9506E6 /* Pods-MapClusters-dummy.m in Sources */,
+				04045E9A3F00EA03FB7FA9D8C17BD7E9 /* CHCSVParser-dummy.m in Sources */,
+				FA2C0E6EF7025C5D1208BD9F278896C1 /* CHCSVParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		847263A40F25CAA4EF6C0275563C7DB3 /* Sources */ = {
+		BA303C8D4D45949E72E7924A69D428DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2AE475DEB0AC26C9294E5C375BEA35 /* CHCSVParser-dummy.m in Sources */,
-				C20EEA9DBC8229C68212CF8E12011E45 /* CHCSVParser.m in Sources */,
+				3874D2417EAEA42294851CC5D0411814 /* Pods-MapClusters-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CFB7038634F76A7D36D601F70494FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268631ED1FB894E5AB88DE56F90CD55D /* CCHCenterOfMassMapClusterer.m in Sources */,
+				4297F19A031786B84FCF99B2626F80EB /* CCHFadeInOutMapAnimator.m in Sources */,
+				317A9027A4647A89FC1D097D8A538048 /* CCHMapClusterAnnotation.m in Sources */,
+				B67044E91EA1FD3B1228B2FFEAB3EDE8 /* CCHMapClusterController-dummy.m in Sources */,
+				56AE335C6DC15E724FD1DC4563B6DEC6 /* CCHMapClusterController.m in Sources */,
+				96DAB206E75AD10958751ADCBE63B7E7 /* CCHMapClusterControllerDebugPolygon.m in Sources */,
+				288316F96918897D4391794D6AE062AA /* CCHMapClusterControllerUtils.m in Sources */,
+				D26E7B1105A37E850C156DB01FD8DC17 /* CCHMapClusterOperation.m in Sources */,
+				4A2484A3C39B32C8005AA64262198A64 /* CCHMapTree.m in Sources */,
+				F1BB4EA393266846BA7F4D8013388306 /* CCHMapTreeUtils.m in Sources */,
+				D4D9419752CE3A3924638EA58335917C /* CCHMapViewDelegateProxy.m in Sources */,
+				0F4C6C90D2ADCB5B325EFB1347975605 /* CCHNearCenterMapClusterer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0BDECA5EA2F9ED34C8056CB0955F1CC3 /* PBXTargetDependency */ = {
+		D4061277B14CB79F5CF1AE83F1A380FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CHCSVParser;
-			target = A88EB07374DC4C58AD10F21430BB9B30 /* CHCSVParser */;
-			targetProxy = 7E114D595923B081D00874A5FB8A4C32 /* PBXContainerItemProxy */;
+			target = 14C2BB2785A901B0BBA99A13E2AFB4B5 /* CHCSVParser */;
+			targetProxy = 2E1F1A3B1671496D8787E9758419FE30 /* PBXContainerItemProxy */;
+		};
+		E04690AC2367302DF77FD686BCA7F1D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CCHMapClusterController;
+			target = B7156704A22FBCCF8322CE2938FBEFED /* CCHMapClusterController */;
+			targetProxy = BB0098620C0381613888ADB1F8C8F773 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -296,9 +488,25 @@
 			};
 			name = Debug;
 		};
-		429658F9B7E0DBB29776FD1190A0938C /* Release */ = {
+		2B344AA83197F06B39E6177FA1178143 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22BA637BDF76F55DAE49280029B38FB7 /* Pods-MapClusters.release.xcconfig */;
+			baseConfigurationReference = 24234E51EC0F03153710EB89657903A2 /* CCHMapClusterController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/CCHMapClusterController/CCHMapClusterController-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		369F6FE88539C26C1F5677268340D278 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A430DEC06D6759FD085C67ABFC184A80 /* Pods-MapClusters.release.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -314,9 +522,26 @@
 			};
 			name = Release;
 		};
-		523B858552F278B6A9F137EDE860F1DA /* Debug */ = {
+		42C0F3AAAA4C8CDDBA8B13DA74443407 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FEFE350F70D9485C4EABA9DFCD51FDD /* Pods-MapClusters.debug.xcconfig */;
+			baseConfigurationReference = 24234E51EC0F03153710EB89657903A2 /* CCHMapClusterController-Private.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/CCHMapClusterController/CCHMapClusterController-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		766077DC37F03D72307B34F8BC068FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A7CC8842771BC02FDFCDC349702290A /* Pods-MapClusters.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -365,9 +590,25 @@
 			};
 			name = Release;
 		};
-		E2FB06D7E789543E5FC959C9D3BAC55F /* Release */ = {
+		C42B8A71F7899324E9811E39FB0F71F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D6D889BAFA98B2E055E757AA302F8DF /* CHCSVParser-Private.xcconfig */;
+			baseConfigurationReference = C456D6E47915C81804DFCEA6B6763DB9 /* CHCSVParser-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/CHCSVParser/CHCSVParser-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CB3EFFE5940FCEA80F9C761039081A49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C456D6E47915C81804DFCEA6B6763DB9 /* CHCSVParser-Private.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -382,22 +623,6 @@
 			};
 			name = Release;
 		};
-		FFB4D7271BC27219055DA9130305B558 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D6D889BAFA98B2E055E757AA302F8DF /* CHCSVParser-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/CHCSVParser/CHCSVParser-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -410,20 +635,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B60F95D5FFFD9CB4B8F350230F50527E /* Build configuration list for PBXNativeTarget "Pods-MapClusters" */ = {
+		833D7F72502EC958799B9C670C63CDD4 /* Build configuration list for PBXNativeTarget "Pods-MapClusters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				523B858552F278B6A9F137EDE860F1DA /* Debug */,
-				429658F9B7E0DBB29776FD1190A0938C /* Release */,
+				766077DC37F03D72307B34F8BC068FE3 /* Debug */,
+				369F6FE88539C26C1F5677268340D278 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BFF15B0F9EEEEDDC20D1041FCC3AAD19 /* Build configuration list for PBXNativeTarget "CHCSVParser" */ = {
+		A9AE2B420BB3F4DD9A1E9DC62931D720 /* Build configuration list for PBXNativeTarget "CHCSVParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFB4D7271BC27219055DA9130305B558 /* Debug */,
-				E2FB06D7E789543E5FC959C9D3BAC55F /* Release */,
+				C42B8A71F7899324E9811E39FB0F71F8 /* Debug */,
+				CB3EFFE5940FCEA80F9C761039081A49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10892C2413F32913B8461AE9B911C91 /* Build configuration list for PBXNativeTarget "CCHMapClusterController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B344AA83197F06B39E6177FA1178143 /* Debug */,
+				42C0F3AAAA4C8CDDBA8B13DA74443407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

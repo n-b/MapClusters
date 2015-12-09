@@ -3,5 +3,6 @@
 
 target 'MapClusters' do
   pod 'CHCSVParser', '~> 2.1'
+  pod 'CCHMapClusterController', '~> 1.6.6'
 end
 
