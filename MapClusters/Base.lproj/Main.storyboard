@@ -596,12 +596,17 @@
                                                 <action selector="showQuadtreeClusters:" target="Ady-hI-5gd" id="ApP-Af-arH"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Countries Overlay" keyEquivalent="'" id="eOt-IT-yr8">
+                                        <menuItem title="Better Clusters" keyEquivalent="'" id="t34-jl-Aub">
+                                            <connections>
+                                                <action selector="showBetterClusters:" target="Ady-hI-5gd" id="4Lm-Kz-6JP"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Countries Overlay" keyEquivalent="(" id="eOt-IT-yr8">
                                             <connections>
                                                 <action selector="showCountriesOverlays:" target="Ady-hI-5gd" id="kru-nR-NCV"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Stations Overlay" keyEquivalent="(" id="DAb-bn-Pvs">
+                                        <menuItem title="Stations Overlay" keyEquivalent="§" id="DAb-bn-Pvs">
                                             <connections>
                                                 <action selector="showStationsOverlay:" target="Ady-hI-5gd" id="nMo-rl-KUO"/>
                                             </connections>
@@ -689,15 +694,26 @@
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="dpf-I6-C55"/>
                                 </connections>
                             </mapView>
+                            <mapView mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-yT-79f" customClass="ADClusterMapView">
+                                <rect key="frame" x="-1" y="0.0" width="480" height="270"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="rZt-9i-1M4"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="qZp-4V-zOI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6BG-vt-z5a"/>
                             <constraint firstItem="qZp-4V-zOI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="J8A-mJ-cBS"/>
+                            <constraint firstItem="Lme-yT-79f" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Llf-Ph-Vd8"/>
+                            <constraint firstItem="Lme-yT-79f" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="-1" id="NdQ-OH-E0s"/>
                             <constraint firstAttribute="trailing" secondItem="qZp-4V-zOI" secondAttribute="trailing" id="OZf-Aj-xGM"/>
+                            <constraint firstAttribute="bottom" secondItem="Lme-yT-79f" secondAttribute="bottom" id="Wgs-Lm-f8i"/>
                             <constraint firstAttribute="bottom" secondItem="qZp-4V-zOI" secondAttribute="bottom" id="hBC-7h-T1w"/>
+                            <constraint firstAttribute="trailing" secondItem="Lme-yT-79f" secondAttribute="trailing" constant="1" id="xjc-Pv-8bF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adClusterMapView" destination="Lme-yT-79f" id="25f-B8-N9w"/>
                         <outlet property="mapView" destination="qZp-4V-zOI" id="WF6-As-meK"/>
                     </connections>
                 </viewController>

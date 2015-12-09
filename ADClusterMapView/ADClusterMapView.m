@@ -404,6 +404,8 @@
         NSAssert(annotation.type == ADClusterAnnotationTypeCluster, @"Inconsistent annotation type!");
         [annotation reset];
     }
+
+    [self animationDidStop:nil finished:nil context:NULL];
 }
 
 - (NSInteger)_numberOfClusters {

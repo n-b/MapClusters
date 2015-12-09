@@ -9,13 +9,21 @@
 #import "CCHMapClusterController.h"
 #import "CCHMapClusterAnnotation.h"
 
-@interface MapVC() <MKMapViewDelegate>
+#import "ADClusterMapView.h"
+
+@interface MapVC() <MKMapViewDelegate, ADClusterMapViewDelegate>
 @property IBOutlet MKMapView * mapView;
+@property IBOutlet ADClusterMapView * adClusterMapView;
 @property (nonatomic) CCHMapClusterController *mapClusterController;
 @property (nonatomic) StationsStore * store;
 @end
 
 @implementation MapVC
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
 
 - (CCHMapClusterController *)mapClusterController
 {
@@ -37,30 +45,36 @@
 - (void)viewDidAppear
 {
     [super viewDidAppear];
+    [self showCountriesOverlays:nil];
 }
 
 - (void)clearMapContents
 {
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView removeOverlays:self.mapView.overlays];
-    [self.mapClusterController removeAnnotations:self.store.stations withCompletionHandler:NULL];
+    self.mapView.hidden = YES;
+    self.adClusterMapView.hidden = YES;
+    [_mapClusterController removeAnnotations:self.store.stations withCompletionHandler:NULL];
 }
 
 - (IBAction)showStationsAnnotations:(id)sender
 {
     [self clearMapContents];
+    self.mapView.hidden = NO;
     [self.mapView addAnnotations:self.store.stations];
 }
 
 - (IBAction)showQuadtreeClusters:(id)sender
 {
     [self clearMapContents];
+    self.mapView.hidden = NO;
     [self.mapClusterController addAnnotations:self.store.stations withCompletionHandler:NULL];
 }
 
 - (IBAction)showCountriesOverlays:(id)sender
 {
     [self clearMapContents];
+    self.mapView.hidden = NO;
     for (Country* country in self.store.countries) {
         [self.mapView addOverlays:country.polygons];
         [self.mapView addAnnotation:country];
@@ -70,10 +84,29 @@
 - (IBAction)showStationsOverlay:(id)sender
 {
     [self clearMapContents];
+    self.mapView.hidden = NO;
     [self.mapView addOverlay:self.store];
 }
 
+- (IBAction)showBetterClusters:(id)sender
+{
+    [self clearMapContents];
+    self.adClusterMapView.hidden = NO;
+    [self.adClusterMapView setAnnotations:self.store.stations];
+}
+
 // MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    if(mapView.hidden==NO) {
+        if(mapView==self.mapView) {
+            self.adClusterMapView.visibleMapRect = mapView.visibleMapRect;
+        } else {
+            self.mapView.visibleMapRect = mapView.visibleMapRect;
+        }
+    }
+}
 
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
@@ -103,6 +136,11 @@
     } else {
         return [[StationsOverlayRenderer alloc] initWithOverlay:overlay];
     }
+}
+
+- (NSInteger)numberOfClustersInMapView:(ADClusterMapView *)mapView
+{
+    return 100;
 }
 
 @end
