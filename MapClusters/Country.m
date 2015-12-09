@@ -19,10 +19,6 @@
 
 - (NSString *)title
 {
-    NSString * test = @"🇦🇺";
-    test = [test stringByApplyingTransform:NSStringTransformToUnicodeName reverse:NO];
-    test = [test stringByApplyingTransform:NSStringTransformToUnicodeName reverse:YES];
-
     NSArray * chars = @[[self.name substringToIndex:1], [self.name substringFromIndex:1]];
     NSMutableString * result = [NSMutableString new];
     for (NSString *character in chars) {
