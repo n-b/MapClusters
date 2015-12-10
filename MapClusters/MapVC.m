@@ -172,10 +172,6 @@ typedef NS_ENUM(NSInteger, MapMode) {
     if([annotation isKindOfClass:CCHMapClusterAnnotation.class]){
         [(CCHMapClusterAnnotation*)annotation setDelegate:self];
     }
-    MKAnnotationView * view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MapClusters"];
-    if(nil==view) {
-        view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapClusters"];
-    }
     BOOL isCluster = NO;
     if([annotation isKindOfClass:CCHMapClusterAnnotation.class]
        && [(CCHMapClusterAnnotation *)annotation isCluster]) {
@@ -190,13 +186,22 @@ typedef NS_ENUM(NSInteger, MapMode) {
     }
 
     if (isCluster) {
-        view.image = [NSImage imageNamed:@"cluster"];
+        MKAnnotationView * view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"cluster"];
+        if(nil==view) {
+            view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"cluster"];
+            view.image = [NSImage imageNamed:@"cluster"];
+            view.canShowCallout = YES;
+        }
+        return view;
     } else {
-        view.image = [NSImage imageNamed:@"station"];
+        MKPinAnnotationView * view = (MKPinAnnotationView*)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"station"];
+        if(nil==view) {
+            view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"station"];
+            view.pinTintColor = [NSColor colorWithRed:63/255. green:174/255. blue:42/255. alpha:1];
+            view.canShowCallout = YES;
+        }
+        return view;
     }
-    
-    view.canShowCallout = YES;
-    return view;
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
