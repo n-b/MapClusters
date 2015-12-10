@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CCHMapClusterController" "${PODS_ROOT}/Headers/Public/CHCSVParser" "${PODS_ROOT}/Headers/Public/GeoJSONSerialization"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CCHMapClusterController" -isystem "${PODS_ROOT}/Headers/Public/CHCSVParser" -isystem "${PODS_ROOT}/Headers/Public/GeoJSONSerialization"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CCHMapClusterController" -l"CHCSVParser" -l"GeoJSONSerialization" -framework "CoreLocation" -framework "MapKit"
+PODS_ROOT = ${SRCROOT}/Pods

@@ -7,23 +7,97 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3701618C1C131DC400FF4703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3701618B1C131DC400FF4703 /* AppDelegate.m */; };
-		3701618F1C131DC400FF4703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3701618E1C131DC400FF4703 /* main.m */; };
-		370161921C131DC400FF4703 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370161911C131DC400FF4703 /* ViewController.m */; };
+		2C57A849F5624C3F73B1ED3B /* libPods-MapClusters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B39FE739E793CA4DB02A4BA /* libPods-MapClusters.a */; };
+		3701618F1C131DC400FF4703 /* MapClusters.m in Sources */ = {isa = PBXBuildFile; fileRef = 3701618E1C131DC400FF4703 /* MapClusters.m */; };
+		370161921C131DC400FF4703 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 370161911C131DC400FF4703 /* MapVC.m */; };
 		370161941C131DC400FF4703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370161931C131DC400FF4703 /* Assets.xcassets */; };
 		370161971C131DC400FF4703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370161951C131DC400FF4703 /* Main.storyboard */; };
+		3706E2711C187B1B00E8A931 /* AT.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E25D1C187B1B00E8A931 /* AT.json */; };
+		3706E2721C187B1B00E8A931 /* BE.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E25E1C187B1B00E8A931 /* BE.json */; };
+		3706E2731C187B1B00E8A931 /* BY.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E25F1C187B1B00E8A931 /* BY.json */; };
+		3706E2741C187B1B00E8A931 /* CH.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2601C187B1B00E8A931 /* CH.json */; };
+		3706E2751C187B1B00E8A931 /* CZ.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2611C187B1B00E8A931 /* CZ.json */; };
+		3706E2761C187B1B00E8A931 /* DE.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2621C187B1B00E8A931 /* DE.json */; };
+		3706E2771C187B1B00E8A931 /* DK.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2631C187B1B00E8A931 /* DK.json */; };
+		3706E2781C187B1B00E8A931 /* ES.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2641C187B1B00E8A931 /* ES.json */; };
+		3706E2791C187B1B00E8A931 /* FR.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2651C187B1B00E8A931 /* FR.json */; };
+		3706E27A1C187B1B00E8A931 /* GB.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2661C187B1B00E8A931 /* GB.json */; };
+		3706E27B1C187B1B00E8A931 /* HU.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2671C187B1B00E8A931 /* HU.json */; };
+		3706E27C1C187B1B00E8A931 /* IT.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2681C187B1B00E8A931 /* IT.json */; };
+		3706E27D1C187B1B00E8A931 /* LU.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2691C187B1B00E8A931 /* LU.json */; };
+		3706E27E1C187B1B00E8A931 /* NL.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E26A1C187B1B00E8A931 /* NL.json */; };
+		3706E27F1C187B1B00E8A931 /* PL.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E26B1C187B1B00E8A931 /* PL.json */; };
+		3706E2801C187B1B00E8A931 /* PT.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E26C1C187B1B00E8A931 /* PT.json */; };
+		3706E2811C187B1B00E8A931 /* RU.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E26D1C187B1B00E8A931 /* RU.json */; };
+		3706E2821C187B1B00E8A931 /* SE.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E26E1C187B1B00E8A931 /* SE.json */; };
+		3706E2831C187B1B00E8A931 /* SI.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E26F1C187B1B00E8A931 /* SI.json */; };
+		3706E2841C187B1B00E8A931 /* SK.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2701C187B1B00E8A931 /* SK.json */; };
+		3706E2861C18829A00E8A931 /* HR.json in Resources */ = {isa = PBXBuildFile; fileRef = 3706E2851C18829A00E8A931 /* HR.json */; };
+		3706E2891C18907B00E8A931 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2881C18907B00E8A931 /* Country.m */; };
+		3706E2941C18C97A00E8A931 /* StationsOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2931C18C97A00E8A931 /* StationsOverlayRenderer.m */; };
+		3706E29E1C18CB8000E8A931 /* ADClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2971C18CB8000E8A931 /* ADClusterAnnotation.m */; };
+		3706E29F1C18CB8000E8A931 /* ADClusterMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E2991C18CB8000E8A931 /* ADClusterMapView.m */; };
+		3706E2A01C18CB8000E8A931 /* ADMapCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E29B1C18CB8000E8A931 /* ADMapCluster.m */; };
+		3706E2A11C18CB8000E8A931 /* ADMapPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706E29D1C18CB8000E8A931 /* ADMapPointAnnotation.m */; };
+		37A9A39E1C182B420079499A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A9A39D1C182B420079499A /* MapKit.framework */; };
+		37A9A3B21C18304A0079499A /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9A3AC1C18304A0079499A /* Station.m */; };
+		37A9A3B31C18304A0079499A /* stations.csv in Resources */ = {isa = PBXBuildFile; fileRef = 37A9A3AD1C18304A0079499A /* stations.csv */; };
+		37A9A3B41C18304A0079499A /* StationsImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9A3AF1C18304A0079499A /* StationsImporter.m */; };
+		37A9A3B51C18304A0079499A /* StationsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A9A3B11C18304A0079499A /* StationsStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B39FE739E793CA4DB02A4BA /* libPods-MapClusters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MapClusters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28CF53D1EC1D32B232B0BEAD /* Pods-MapClusters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapClusters.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapClusters/Pods-MapClusters.release.xcconfig"; sourceTree = "<group>"; };
 		370161871C131DC400FF4703 /* MapClusters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapClusters.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3701618A1C131DC400FF4703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3701618B1C131DC400FF4703 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3701618E1C131DC400FF4703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		370161901C131DC400FF4703 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		370161911C131DC400FF4703 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		370161931C131DC400FF4703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3701618E1C131DC400FF4703 /* MapClusters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapClusters.m; path = MapClusters/MapClusters.m; sourceTree = "<group>"; };
+		370161901C131DC400FF4703 /* MapVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MapVC.h; path = MapClusters/MapVC.h; sourceTree = "<group>"; };
+		370161911C131DC400FF4703 /* MapVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapVC.m; path = MapClusters/MapVC.m; sourceTree = "<group>"; };
+		370161931C131DC400FF4703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MapClusters/Assets.xcassets; sourceTree = "<group>"; };
 		370161961C131DC400FF4703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		370161981C131DC400FF4703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370161981C131DC400FF4703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MapClusters/Info.plist; sourceTree = "<group>"; };
+		3706E25D1C187B1B00E8A931 /* AT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AT.json; sourceTree = "<group>"; };
+		3706E25E1C187B1B00E8A931 /* BE.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BE.json; sourceTree = "<group>"; };
+		3706E25F1C187B1B00E8A931 /* BY.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BY.json; sourceTree = "<group>"; };
+		3706E2601C187B1B00E8A931 /* CH.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CH.json; sourceTree = "<group>"; };
+		3706E2611C187B1B00E8A931 /* CZ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CZ.json; sourceTree = "<group>"; };
+		3706E2621C187B1B00E8A931 /* DE.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DE.json; sourceTree = "<group>"; };
+		3706E2631C187B1B00E8A931 /* DK.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DK.json; sourceTree = "<group>"; };
+		3706E2641C187B1B00E8A931 /* ES.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ES.json; sourceTree = "<group>"; };
+		3706E2651C187B1B00E8A931 /* FR.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FR.json; sourceTree = "<group>"; };
+		3706E2661C187B1B00E8A931 /* GB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GB.json; sourceTree = "<group>"; };
+		3706E2671C187B1B00E8A931 /* HU.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HU.json; sourceTree = "<group>"; };
+		3706E2681C187B1B00E8A931 /* IT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IT.json; sourceTree = "<group>"; };
+		3706E2691C187B1B00E8A931 /* LU.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LU.json; sourceTree = "<group>"; };
+		3706E26A1C187B1B00E8A931 /* NL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NL.json; sourceTree = "<group>"; };
+		3706E26B1C187B1B00E8A931 /* PL.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PL.json; sourceTree = "<group>"; };
+		3706E26C1C187B1B00E8A931 /* PT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PT.json; sourceTree = "<group>"; };
+		3706E26D1C187B1B00E8A931 /* RU.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RU.json; sourceTree = "<group>"; };
+		3706E26E1C187B1B00E8A931 /* SE.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SE.json; sourceTree = "<group>"; };
+		3706E26F1C187B1B00E8A931 /* SI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SI.json; sourceTree = "<group>"; };
+		3706E2701C187B1B00E8A931 /* SK.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SK.json; sourceTree = "<group>"; };
+		3706E2851C18829A00E8A931 /* HR.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HR.json; sourceTree = "<group>"; };
+		3706E2871C18907B00E8A931 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Country.h; path = MapClusters/Country.h; sourceTree = "<group>"; };
+		3706E2881C18907B00E8A931 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Country.m; path = MapClusters/Country.m; sourceTree = "<group>"; };
+		3706E2921C18C97A00E8A931 /* StationsOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StationsOverlayRenderer.h; path = MapClusters/StationsOverlayRenderer.h; sourceTree = "<group>"; };
+		3706E2931C18C97A00E8A931 /* StationsOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StationsOverlayRenderer.m; path = MapClusters/StationsOverlayRenderer.m; sourceTree = "<group>"; };
+		3706E2961C18CB8000E8A931 /* ADClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADClusterAnnotation.h; sourceTree = "<group>"; };
+		3706E2971C18CB8000E8A931 /* ADClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADClusterAnnotation.m; sourceTree = "<group>"; };
+		3706E2981C18CB8000E8A931 /* ADClusterMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADClusterMapView.h; sourceTree = "<group>"; };
+		3706E2991C18CB8000E8A931 /* ADClusterMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADClusterMapView.m; sourceTree = "<group>"; };
+		3706E29A1C18CB8000E8A931 /* ADMapCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapCluster.h; sourceTree = "<group>"; };
+		3706E29B1C18CB8000E8A931 /* ADMapCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapCluster.m; sourceTree = "<group>"; };
+		3706E29C1C18CB8000E8A931 /* ADMapPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADMapPointAnnotation.h; sourceTree = "<group>"; };
+		3706E29D1C18CB8000E8A931 /* ADMapPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADMapPointAnnotation.m; sourceTree = "<group>"; };
+		37A9A39D1C182B420079499A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		37A9A3AB1C18304A0079499A /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Station.h; path = MapClusters/Station.h; sourceTree = "<group>"; };
+		37A9A3AC1C18304A0079499A /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Station.m; path = MapClusters/Station.m; sourceTree = "<group>"; };
+		37A9A3AD1C18304A0079499A /* stations.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stations.csv; path = MapClusters/stations.csv; sourceTree = "<group>"; };
+		37A9A3AE1C18304A0079499A /* StationsImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StationsImporter.h; path = MapClusters/StationsImporter.h; sourceTree = "<group>"; };
+		37A9A3AF1C18304A0079499A /* StationsImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StationsImporter.m; path = MapClusters/StationsImporter.m; sourceTree = "<group>"; };
+		37A9A3B01C18304A0079499A /* StationsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StationsStore.h; path = MapClusters/StationsStore.h; sourceTree = "<group>"; };
+		37A9A3B11C18304A0079499A /* StationsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StationsStore.m; path = MapClusters/StationsStore.m; sourceTree = "<group>"; };
+		BAAD361C78F6732CDC755D16 /* Pods-MapClusters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapClusters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapClusters/Pods-MapClusters.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A9A39E1C182B420079499A /* MapKit.framework in Frameworks */,
+				2C57A849F5624C3F73B1ED3B /* libPods-MapClusters.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +116,18 @@
 		3701617E1C131DC300FF4703 = {
 			isa = PBXGroup;
 			children = (
-				370161891C131DC400FF4703 /* MapClusters */,
+				370161981C131DC400FF4703 /* Info.plist */,
+				370161951C131DC400FF4703 /* Main.storyboard */,
+				370161931C131DC400FF4703 /* Assets.xcassets */,
+				3701618E1C131DC400FF4703 /* MapClusters.m */,
+				370161901C131DC400FF4703 /* MapVC.h */,
+				370161911C131DC400FF4703 /* MapVC.m */,
+				3706E28E1C18C95F00E8A931 /* Views */,
+				37A9A39F1C182FB00079499A /* DataModel */,
 				370161881C131DC400FF4703 /* Products */,
+				3706E2951C18CB8000E8A931 /* ADClusterMapView */,
+				E1D7D190BEF5D08F99B9F774 /* Pods */,
+				82E9A2241DE9CF8B49B5446E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,27 +139,91 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		370161891C131DC400FF4703 /* MapClusters */ = {
+		3706E25C1C187B1B00E8A931 /* countries */ = {
 			isa = PBXGroup;
 			children = (
-				3701618A1C131DC400FF4703 /* AppDelegate.h */,
-				3701618B1C131DC400FF4703 /* AppDelegate.m */,
-				370161901C131DC400FF4703 /* ViewController.h */,
-				370161911C131DC400FF4703 /* ViewController.m */,
-				370161931C131DC400FF4703 /* Assets.xcassets */,
-				370161951C131DC400FF4703 /* Main.storyboard */,
-				370161981C131DC400FF4703 /* Info.plist */,
-				3701618D1C131DC400FF4703 /* Supporting Files */,
+				3706E25D1C187B1B00E8A931 /* AT.json */,
+				3706E25E1C187B1B00E8A931 /* BE.json */,
+				3706E25F1C187B1B00E8A931 /* BY.json */,
+				3706E2601C187B1B00E8A931 /* CH.json */,
+				3706E2611C187B1B00E8A931 /* CZ.json */,
+				3706E2621C187B1B00E8A931 /* DE.json */,
+				3706E2631C187B1B00E8A931 /* DK.json */,
+				3706E2641C187B1B00E8A931 /* ES.json */,
+				3706E2651C187B1B00E8A931 /* FR.json */,
+				3706E2661C187B1B00E8A931 /* GB.json */,
+				3706E2671C187B1B00E8A931 /* HU.json */,
+				3706E2851C18829A00E8A931 /* HR.json */,
+				3706E2681C187B1B00E8A931 /* IT.json */,
+				3706E2691C187B1B00E8A931 /* LU.json */,
+				3706E26A1C187B1B00E8A931 /* NL.json */,
+				3706E26B1C187B1B00E8A931 /* PL.json */,
+				3706E26C1C187B1B00E8A931 /* PT.json */,
+				3706E26D1C187B1B00E8A931 /* RU.json */,
+				3706E26E1C187B1B00E8A931 /* SE.json */,
+				3706E26F1C187B1B00E8A931 /* SI.json */,
+				3706E2701C187B1B00E8A931 /* SK.json */,
 			);
-			path = MapClusters;
+			path = countries;
 			sourceTree = "<group>";
 		};
-		3701618D1C131DC400FF4703 /* Supporting Files */ = {
+		3706E28E1C18C95F00E8A931 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3701618E1C131DC400FF4703 /* main.m */,
+				3706E2921C18C97A00E8A931 /* StationsOverlayRenderer.h */,
+				3706E2931C18C97A00E8A931 /* StationsOverlayRenderer.m */,
 			);
-			name = "Supporting Files";
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3706E2951C18CB8000E8A931 /* ADClusterMapView */ = {
+			isa = PBXGroup;
+			children = (
+				3706E2961C18CB8000E8A931 /* ADClusterAnnotation.h */,
+				3706E2971C18CB8000E8A931 /* ADClusterAnnotation.m */,
+				3706E2981C18CB8000E8A931 /* ADClusterMapView.h */,
+				3706E2991C18CB8000E8A931 /* ADClusterMapView.m */,
+				3706E29A1C18CB8000E8A931 /* ADMapCluster.h */,
+				3706E29B1C18CB8000E8A931 /* ADMapCluster.m */,
+				3706E29C1C18CB8000E8A931 /* ADMapPointAnnotation.h */,
+				3706E29D1C18CB8000E8A931 /* ADMapPointAnnotation.m */,
+			);
+			path = ADClusterMapView;
+			sourceTree = "<group>";
+		};
+		37A9A39F1C182FB00079499A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				37A9A3AB1C18304A0079499A /* Station.h */,
+				37A9A3AC1C18304A0079499A /* Station.m */,
+				3706E2871C18907B00E8A931 /* Country.h */,
+				3706E2881C18907B00E8A931 /* Country.m */,
+				37A9A3AD1C18304A0079499A /* stations.csv */,
+				37A9A3AE1C18304A0079499A /* StationsImporter.h */,
+				37A9A3AF1C18304A0079499A /* StationsImporter.m */,
+				37A9A3B01C18304A0079499A /* StationsStore.h */,
+				37A9A3B11C18304A0079499A /* StationsStore.m */,
+				3706E25C1C187B1B00E8A931 /* countries */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		82E9A2241DE9CF8B49B5446E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37A9A39D1C182B420079499A /* MapKit.framework */,
+				0B39FE739E793CA4DB02A4BA /* libPods-MapClusters.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1D7D190BEF5D08F99B9F774 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BAAD361C78F6732CDC755D16 /* Pods-MapClusters.debug.xcconfig */,
+				28CF53D1EC1D32B232B0BEAD /* Pods-MapClusters.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3701619B1C131DC400FF4703 /* Build configuration list for PBXNativeTarget "MapClusters" */;
 			buildPhases = (
+				2D8F75099573C494C231D27F /* Check Pods Manifest.lock */,
 				370161831C131DC300FF4703 /* Sources */,
 				370161841C131DC300FF4703 /* Frameworks */,
 				370161851C131DC300FF4703 /* Resources */,
+				7322BFCF6F67DC6C84AB6504 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,21 +285,84 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3706E2721C187B1B00E8A931 /* BE.json in Resources */,
+				3706E2821C187B1B00E8A931 /* SE.json in Resources */,
+				37A9A3B31C18304A0079499A /* stations.csv in Resources */,
+				3706E2741C187B1B00E8A931 /* CH.json in Resources */,
+				3706E2791C187B1B00E8A931 /* FR.json in Resources */,
+				3706E2781C187B1B00E8A931 /* ES.json in Resources */,
+				3706E2751C187B1B00E8A931 /* CZ.json in Resources */,
+				3706E27B1C187B1B00E8A931 /* HU.json in Resources */,
+				3706E2761C187B1B00E8A931 /* DE.json in Resources */,
+				3706E2861C18829A00E8A931 /* HR.json in Resources */,
+				3706E2711C187B1B00E8A931 /* AT.json in Resources */,
 				370161941C131DC400FF4703 /* Assets.xcassets in Resources */,
+				3706E2801C187B1B00E8A931 /* PT.json in Resources */,
+				3706E27A1C187B1B00E8A931 /* GB.json in Resources */,
+				3706E2831C187B1B00E8A931 /* SI.json in Resources */,
+				3706E27C1C187B1B00E8A931 /* IT.json in Resources */,
 				370161971C131DC400FF4703 /* Main.storyboard in Resources */,
+				3706E2771C187B1B00E8A931 /* DK.json in Resources */,
+				3706E27E1C187B1B00E8A931 /* NL.json in Resources */,
+				3706E2731C187B1B00E8A931 /* BY.json in Resources */,
+				3706E2811C187B1B00E8A931 /* RU.json in Resources */,
+				3706E2841C187B1B00E8A931 /* SK.json in Resources */,
+				3706E27D1C187B1B00E8A931 /* LU.json in Resources */,
+				3706E27F1C187B1B00E8A931 /* PL.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D8F75099573C494C231D27F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7322BFCF6F67DC6C84AB6504 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapClusters/Pods-MapClusters-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		370161831C131DC300FF4703 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370161921C131DC400FF4703 /* ViewController.m in Sources */,
-				3701618F1C131DC400FF4703 /* main.m in Sources */,
-				3701618C1C131DC400FF4703 /* AppDelegate.m in Sources */,
+				3706E2941C18C97A00E8A931 /* StationsOverlayRenderer.m in Sources */,
+				37A9A3B41C18304A0079499A /* StationsImporter.m in Sources */,
+				3706E2A11C18CB8000E8A931 /* ADMapPointAnnotation.m in Sources */,
+				3706E29E1C18CB8000E8A931 /* ADClusterAnnotation.m in Sources */,
+				370161921C131DC400FF4703 /* MapVC.m in Sources */,
+				3706E2A01C18CB8000E8A931 /* ADMapCluster.m in Sources */,
+				3706E29F1C18CB8000E8A931 /* ADClusterMapView.m in Sources */,
+				3701618F1C131DC400FF4703 /* MapClusters.m in Sources */,
+				37A9A3B51C18304A0079499A /* StationsStore.m in Sources */,
+				3706E2891C18907B00E8A931 /* Country.m in Sources */,
+				37A9A3B21C18304A0079499A /* Station.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +375,7 @@
 				370161961C131DC400FF4703 /* Base */,
 			);
 			name = Main.storyboard;
+			path = MapClusters;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -246,6 +462,7 @@
 		};
 		3701619C1C131DC400FF4703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAAD361C78F6732CDC755D16 /* Pods-MapClusters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -258,6 +475,7 @@
 		};
 		3701619D1C131DC400FF4703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28CF53D1EC1D32B232B0BEAD /* Pods-MapClusters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -287,6 +505,7 @@
 				3701619D1C131DC400FF4703 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -583,16 +585,34 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="View" id="HyV-fh-RgO">
                                     <items>
-                                        <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                        <menuItem title="Auto" keyEquivalent="&amp;" id="snW-S8-Cw5">
                                             <connections>
-                                                <action selector="toggleToolbarShown:" target="Ady-hI-5gd" id="BXY-wc-z0C"/>
+                                                <action selector="showBestView:" target="Ady-hI-5gd" id="MPf-7q-dJk"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Customize Toolbar…" id="1UK-8n-QPP">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Individual Annotations" keyEquivalent="é" id="1UK-8n-QPP">
                                             <connections>
-                                                <action selector="runToolbarCustomizationPalette:" target="Ady-hI-5gd" id="pQI-g3-MTW"/>
+                                                <action selector="showStationsAnnotations:" target="Ady-hI-5gd" id="NKp-IE-fbM"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Quad Tree Clusters" keyEquivalent="&quot;" id="Z2q-oY-4V6">
+                                            <connections>
+                                                <action selector="showQuadtreeClusters:" target="Ady-hI-5gd" id="ApP-Af-arH"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Better Clusters" keyEquivalent="'" id="t34-jl-Aub">
+                                            <connections>
+                                                <action selector="showBetterClusters:" target="Ady-hI-5gd" id="4Lm-Kz-6JP"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Countries Overlay" keyEquivalent="(" id="eOt-IT-yr8">
+                                            <connections>
+                                                <action selector="showCountriesOverlays:" target="Ady-hI-5gd" id="kru-nR-NCV"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Stations Overlay" keyEquivalent="§" id="DAb-bn-Pvs">
+                                            <connections>
+                                                <action selector="showStationsOverlay:" target="Ady-hI-5gd" id="nMo-rl-KUO"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -641,16 +661,16 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="MapClusters" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -664,14 +684,42 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--MapVC-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MapVC" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <mapView mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qZp-4V-zOI">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="dpf-I6-C55"/>
+                                </connections>
+                            </mapView>
+                            <mapView mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-yT-79f" customClass="ADClusterMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="rZt-9i-1M4"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qZp-4V-zOI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6BG-vt-z5a"/>
+                            <constraint firstItem="qZp-4V-zOI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="J8A-mJ-cBS"/>
+                            <constraint firstItem="Lme-yT-79f" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Llf-Ph-Vd8"/>
+                            <constraint firstItem="Lme-yT-79f" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="NdQ-OH-E0s"/>
+                            <constraint firstAttribute="trailing" secondItem="qZp-4V-zOI" secondAttribute="trailing" id="OZf-Aj-xGM"/>
+                            <constraint firstAttribute="bottom" secondItem="Lme-yT-79f" secondAttribute="bottom" id="Wgs-Lm-f8i"/>
+                            <constraint firstAttribute="bottom" secondItem="qZp-4V-zOI" secondAttribute="bottom" id="hBC-7h-T1w"/>
+                            <constraint firstAttribute="trailing" secondItem="Lme-yT-79f" secondAttribute="trailing" id="xjc-Pv-8bF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adClusterMapView" destination="Lme-yT-79f" id="25f-B8-N9w"/>
+                        <outlet property="mapView" destination="qZp-4V-zOI" id="WF6-As-meK"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

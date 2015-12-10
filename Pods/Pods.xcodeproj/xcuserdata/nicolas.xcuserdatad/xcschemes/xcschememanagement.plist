@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CCHMapClusterController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CHCSVParser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GeoJSONSerialization.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MapClusters.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1099F6B7224E7CDAE590B2D3D8AA83D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2FEFA3667362F174EC2C2CE3D8F332A2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FFD9EA579D3CE1A0CEAFEF5A05902A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B2552ED45B95818BE03889689EA8358C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
