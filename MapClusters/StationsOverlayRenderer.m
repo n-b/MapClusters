@@ -22,7 +22,8 @@
         }
         CGPoint point = [self pointForMapPoint:mapPoint];
         
-        CGContextSetFillColorWithColor(context, NSColor.redColor.CGColor);
+        
+        CGContextSetFillColorWithColor(context, [NSColor colorWithRed:63/255. green:174/255. blue:42/255. alpha:1].CGColor);
         
         CGRect stationRect = CGRectMake(point.x-stationRadius, point.y-stationRadius, stationRadius * 2, stationRadius * 2);
         CGContextFillEllipseInRect(context, CGRectIntegral(stationRect));

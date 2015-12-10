@@ -585,7 +585,11 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="View" id="HyV-fh-RgO">
                                     <items>
-                                        <menuItem title="Auto" keyEquivalent="&amp;" id="snW-S8-Cw5"/>
+                                        <menuItem title="Auto" keyEquivalent="&amp;" id="snW-S8-Cw5">
+                                            <connections>
+                                                <action selector="showBestView:" target="Ady-hI-5gd" id="MPf-7q-dJk"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Individual Annotations" keyEquivalent="é" id="1UK-8n-QPP">
                                             <connections>
                                                 <action selector="showStationsAnnotations:" target="Ady-hI-5gd" id="NKp-IE-fbM"/>
