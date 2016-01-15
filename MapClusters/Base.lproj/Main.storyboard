@@ -692,13 +692,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <mapView mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qZp-4V-zOI">
+                            <mapView mapType="standard" showsBuildings="NO" showsPointsOfInterest="NO" showsCompass="NO" showsZoomControls="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZp-4V-zOI">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <connections>
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="dpf-I6-C55"/>
                                 </connections>
                             </mapView>
-                            <mapView mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-yT-79f" customClass="ADClusterMapView">
+                            <mapView mapType="standard" showsBuildings="NO" showsPointsOfInterest="NO" showsCompass="NO" showsZoomControls="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lme-yT-79f" customClass="ADClusterMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <connections>
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="rZt-9i-1M4"/>

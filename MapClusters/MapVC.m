@@ -92,7 +92,7 @@ typedef NS_ENUM(NSInteger, MapMode) {
 
     MKZoomScale zoomScale = self.mapView.visibleMapRect.size.width / self.mapView.bounds.size.width;
     NSInteger zoomLevel = 20 - ceil(log2(zoomScale));
-    if(zoomLevel>8) {
+    if(zoomLevel>10) {
         self.mode = MapModeStationsAnnotations;
     } else if(zoomLevel>5) {
         self.mode = MapModeStationsOverlay;
